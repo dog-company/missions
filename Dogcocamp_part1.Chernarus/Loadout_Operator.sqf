@@ -17,14 +17,14 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 Comment "Uniform";
-_unit forceAddUniform "TRYK_U_B_ACU";
+_unit forceAddUniform "TRYK_U_B_Woodland";
 _unit addItemToUniform "ACE_CableTie";
 _unit addItemToUniform "ACE_Flashlight_XL50";
 _unit addItemToUniform "ACE_EarPlugs";
 _unit addItemToUniform "ACE_microDAGR";
 
 Comment "Vest";
-_unit addVest "milgp_v_marciras_assaulter_belt_rgr";
+_unit addVest "milgp_v_marciras_assaulter_belt_mc";
 for "_i" from 1 to 4 do {_unit addItemToVest "ACE_M84";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 _unit addItemToVest "ACE_Chemlight_HiRed";
@@ -33,25 +33,28 @@ for "_i" from 1 to 1 do {_unit addItemToVest "SmokeShellBlue";};
 for "_i" from 1 to 1 do {_unit addItemToVest "SmokeShellRed";};
 
 Comment "Backpack";
-_unit addBackpack "milgp_bp_marciras_Pointman_rgr";
+_unit addBackpack "TRYK_B_Alicepack";
 for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_fieldDressing";};
 for "_i" from 1 to 6 do {_unit addItemToBackpack "ACE_morphine";};
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_epinephrine";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_M84";};
+_unit AddItemToBackpack "G_Balaclava_TI_G_blk_F";
 
 Comment "Helmet";
-_unit addHeadgear "milgp_h_airframe_Combat_rgr";
+_unit addHeadgear "H_HelmetB_camo";
+_unit addGoggles "avon_ct12_strapless";
 
 Comment "Weapon";
-_unit addWeapon "SMA_M4afg";
+_unit addWeapon "SMA_ACRREMblk";
 _unit addPrimaryWeaponItem "SMA_SFFL_BLK";
+_unit addPrimaryWeaponItem "SMA_eotechG33_3XDOWN";
 _unit addWeapon "hgun_Pistol_heavy_01_F";
 
 Comment "Magazines";
-for "_i" from 1 to 1 do {_unit addItemToUniform "SMA_30Rnd_556x45_M855A1_Tracer";};
-for "_i" from 1 to 12 do {_unit addItemToVest "SMA_30Rnd_556x45_M855A1_Tracer";};
-for "_i" from 1 to 5 do {_unit addItemToBackpack "SMA_30Rnd_556x45_M855A1_Tracer";};
+for "_i" from 1 to 1 do {_unit addItemToUniform "SMA_30Rnd_68x43_SPC_FMJ_Tracer";};
+for "_i" from 1 to 12 do {_unit addItemToVest "SMA_30Rnd_68x43_SPC_FMJ_Tracer";};
+for "_i" from 1 to 5 do {_unit addItemToBackpack "SMA_30Rnd_68x43_SPC_FMJ_Tracer";};
 for "_i" from 1 to 3 do {_unit addItemToUniform "11Rnd_45ACP_Mag";};
 
 Comment "Items";

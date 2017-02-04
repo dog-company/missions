@@ -1,0 +1,561 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"a3_map_stratis",
+		"mbg_killhouses_a3",
+		"aia_misc3_config",
+		"A3_Structures_F_Training",
+		"A3_Air_F_Heli_Light_01",
+		"rhsusf_c_hmmwv",
+		"rhsusf_vehicles",
+		"A3_Soft_F_Offroad_01",
+		"A3_Characters_F_Civil",
+		"A3_Modules_F",
+		"A3_Soft_F_MRAP_01",
+		"A3_Weapons_F_Ammoboxes",
+		"A3_Modules_F_Effects",
+		"RHS_US_A2_AirImport"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"A3_Characters_F_Civil",
+		"A3_Modules_F",
+		"A3_Structures_F_Training",
+		"A3_Air_F_Heli_Light_01",
+		"rhsusf_c_hmmwv",
+		"rhsusf_vehicles",
+		"A3_Soft_F_Offroad_01",
+		"A3_Soft_F_MRAP_01",
+		"RHS_US_A2_AirImport",
+		"a3_map_stratis"
+	};
+	randomSeed=12367286;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=8;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={1810.1177,5.5,5719.9688};
+					azimut=99.620598;
+					id=0;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					text="UnitNATO_ASL_SL";
+					init="GrpNATO_ASL = group this; [""dc"",this] call f_fnc_assignGear; comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_U_B_BLKBLK_CombatUniform"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""hlc_30Rnd_556x45_B_AUG"";};  for ""_i"" from 1 to 3 do {this addItemToUniform ""rhsusf_mag_17Rnd_9x19_JHP"";};  this addVest ""TRYK_V_Sheriff_BA_TB"";  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_morphine"";};  this addItemToVest ""ACE_EarPlugs"";  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_CableTie"";};  this addItemToVest ""ACE_microDAGR"";  for ""_i"" from 1 to 4 do {this addItemToVest ""hlc_30Rnd_556x45_B_AUG"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";};  this addItemToVest ""ACE_HandFlare_Red"";  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_m18_green"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_mk84"";};  this addItemToVest ""Chemlight_green"";  this addHeadgear ""TRYK_H_PASGT_BLK"";  this addGoggles ""TRYK_Spset_PHC2_Glasses"";    comment ""Add weapons"";  this addWeapon ""hlc_rifle_auga2_b"";  this addPrimaryWeaponItem ""rhsusf_acc_compm4"";  this addWeapon ""rhsusf_weap_glock17g4"";  this addWeapon ""lerca_1200_black"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""tf_microdagr"";  this linkItem ""ItemGPS"";  this linkItem ""TRYK_G_bala_ess_NV"";    ";
+					description="NATO Alpha Squad Leader";
+				};
+				class Item1
+				{
+					position[]={1808.1298,5.5,5717.7505};
+					azimut=99.620598;
+					id=1;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="UnitNATO_ASL_M";
+					init="GrpNATO_ASL = group this; [""ctu-medic"",this] call f_fnc_assignGear; comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_U_B_BLKBLK_CombatUniform"";  for ""_i"" from 1 to 4 do {this addItemToUniform ""hlc_30Rnd_9x19_B_MP5"";};  this addVest ""TRYK_V_Sheriff_BA_TB4"";  this addItemToVest ""ACE_EarPlugs"";  for ""_i"" from 1 to 3 do {this addItemToVest ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_morphine"";};  for ""_i"" from 1 to 3 do {this addItemToVest ""ACE_CableTie"";};  for ""_i"" from 1 to 7 do {this addItemToVest ""hlc_30Rnd_9x19_B_MP5"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";};  this addItemToVest ""rhs_mag_mk84"";  this addItemToVest ""rhs_mag_m7a3_cs"";  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_m18_green"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_HandFlare_Red"";};  this addItemToVest ""rhs_mag_an_m8hc"";  this addBackpack ""TRYK_B_Medbag_BK"";  for ""_i"" from 1 to 5 do {this addItemToBackpack ""ACE_fieldDressing"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""ACE_morphine"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""ACE_epinephrine"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_bloodIV"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_salineIV"";};  for ""_i"" from 1 to 4 do {this addItemToBackpack ""ACE_bodyBag"";};  this addItemToBackpack ""ACE_wirecutter"";  this addItemToBackpack ""ACE_HandFlare_Red"";  for ""_i"" from 1 to 3 do {this addItemToBackpack ""Chemlight_blue"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""rhs_mag_an_m8hc"";};  this addItemToBackpack ""rhs_mag_m18_red"";  this addItemToBackpack ""rhs_mag_m18_green"";  this addItemToBackpack ""rhs_mag_m7a3_cs"";  this addHeadgear ""TRYK_H_PASGT_BLK"";  this addGoggles ""TRYK_kio_balaclava_ESS"";    comment ""Add weapons"";  this addWeapon ""hlc_smg_mp5a4"";  this addPrimaryWeaponItem ""acc_flashlight"";  this addPrimaryWeaponItem ""rhsusf_acc_compm4"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""rhsusf_ANPVS_14"";      ";
+					description="NATO Alpha Medic";
+				};
+				class Item2
+				{
+					position[]={1811.0942,5.5,5721.9761};
+					azimut=104.191;
+					id=2;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitNATO_ASL_AR";
+					init="GrpNATO_ASL = group this; comment ""Exported from Arsenal by 4ner"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_U_B_BLKBLK_CombatUniform"";  this addItemToUniform ""rhsusf_ANPVS_14"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""rhsusf_mag_17Rnd_9x19_JHP"";};  this addVest ""TRYK_V_tacv1_BK"";  this addItemToVest ""ACE_EarPlugs"";  for ""_i"" from 1 to 3 do {this addItemToVest ""ACE_CableTie"";};  this addItemToVest ""ACE_microDAGR"";  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_an_m8hc"";};  this addItemToVest ""rhs_mag_m18_green"";  this addItemToVest ""rhs_200rnd_556x45_M_SAW"";  for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_JHP"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_m67"";};  this addItemToVest ""ACE_M84"";  this addItemToVest ""rhs_mag_mk84"";  this addItemToVest ""rhs_mag_m7a3_cs"";  this addItemToVest ""rhs_mag_mk3a2"";  this addBackpack ""TRYK_B_BAF_BAG_BLK"";  this addItemToBackpack ""ACE_wirecutter"";  for ""_i"" from 1 to 3 do {this addItemToBackpack ""rhs_200rnd_556x45_M_SAW"";};  this addHeadgear ""TRYK_H_PASGT_BLK"";  this addGoggles ""TRYK_kio_balaclava_ESS"";    comment ""Add weapons"";  this addWeapon ""rhs_weap_m249_pip_L"";  this addPrimaryWeaponItem ""rhsusf_acc_compm4"";  this addWeapon ""rhsusf_weap_glock17g4"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""tf_anprc152_3"";  this linkItem ""rhsusf_ANPVS_14"";    ";
+					description="NATO Alpha Automatic Rifleman";
+				};
+			};
+		};
+		class Item1
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={1801.3225,5.5,5724.0088};
+					azimut=99.620598;
+					id=3;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="UnitNATO_A1_FTL";
+					init="GrpNATO_A1 = group this; [""ctu-lead"",this] call f_fnc_assignGear; comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_U_B_BLKBLK_CombatUniform"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""hlc_30Rnd_556x45_B_AUG"";};  for ""_i"" from 1 to 3 do {this addItemToUniform ""rhsusf_mag_17Rnd_9x19_JHP"";};  this addVest ""TRYK_V_Sheriff_BA_TB"";  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_morphine"";};  this addItemToVest ""ACE_EarPlugs"";  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_CableTie"";};  this addItemToVest ""ACE_microDAGR"";  for ""_i"" from 1 to 4 do {this addItemToVest ""hlc_30Rnd_556x45_B_AUG"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";};  this addItemToVest ""ACE_HandFlare_Red"";  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_m18_green"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_mk84"";};  this addItemToVest ""Chemlight_green"";  this addHeadgear ""TRYK_H_PASGT_BLK"";  this addGoggles ""TRYK_Spset_PHC2_Glasses"";    comment ""Add weapons"";  this addWeapon ""hlc_rifle_auga2_b"";  this addPrimaryWeaponItem ""rhsusf_acc_compm4"";  this addWeapon ""rhsusf_weap_glock17g4"";  this addWeapon ""lerca_1200_black"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""tf_microdagr"";  this linkItem ""ItemGPS"";  this linkItem ""TRYK_G_bala_ess_NV"";    ";
+					description="NATO Alpha 1 Fireteam Leader";
+				};
+				class Item1
+				{
+					position[]={1799.1384,5.5,5721.4575};
+					azimut=99.620598;
+					id=4;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitNATO_A1_AR";
+					init="GrpNATO_A1 = group this; [""ctu-acr"",this] call f_fnc_assignGear; comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_U_B_BLKBLK_CombatUniform"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_quikclot"";};  for ""_i"" from 1 to 3 do {this addItemToUniform ""hlc_30Rnd_556x45_B_AUG"";};  for ""_i"" from 1 to 2 do {this addItemToUniform ""rhs_mag_an_m8hc"";};  this addVest ""TRYK_V_tacv1L_BK"";  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_CableTie"";};  this addItemToVest ""ACE_EarPlugs"";  this addItemToVest ""ACE_personalAidKit"";  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_m67"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_m7a3_cs"";};  this addItemToVest ""rhs_mag_mk3a2"";  for ""_i"" from 1 to 7 do {this addItemToVest ""hlc_30Rnd_556x45_B_AUG"";};  this addHeadgear ""TRYK_H_PASGT_BLK"";  this addGoggles ""TRYK_kio_balaclava_ESS"";    comment ""Add weapons"";  this addWeapon ""hlc_rifle_auga2carb_b"";  this addPrimaryWeaponItem ""rhsusf_acc_compm4"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""rhsusf_ANPVS_14"";    ";
+					description="NATO Alpha 1 Rifleman";
+				};
+				class Item2
+				{
+					position[]={1798.5298,5.5,5718.4141};
+					azimut=99.620598;
+					id=5;
+					side="WEST";
+					vehicle="B_Soldier_lite_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitNATO_A1_AAR";
+					init="GrpNATO_A1 = group this; [""ctu-smg"",this] call f_fnc_assignGear; comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_U_B_BLKBLK_CombatUniform"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""hlc_30Rnd_9x19_B_MP5"";};  this addVest ""TRYK_V_tacv1L_BK"";  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_CableTie"";};  this addItemToVest ""ACE_EarPlugs"";  this addItemToVest ""ACE_personalAidKit"";  for ""_i"" from 1 to 7 do {this addItemToVest ""hlc_30Rnd_9x19_B_MP5"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_m67"";};  this addItemToVest ""rhs_mag_m7a3_cs"";  this addItemToVest ""rhs_mag_mk3a2"";  this addHeadgear ""TRYK_H_PASGT_BLK"";  this addGoggles ""TRYK_kio_balaclava_ESS"";    comment ""Add weapons"";  this addWeapon ""hlc_smg_mp5a4"";  this addPrimaryWeaponItem ""acc_flashlight"";  this addPrimaryWeaponItem ""rhsusf_acc_compm4"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""rhsusf_ANPVS_14"";  ";
+					description="NATO Alpha 1 Submachinegunner";
+				};
+				class Item3
+				{
+					position[]={1797.9637,5.5,5715.27};
+					azimut=99.620598;
+					id=6;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitNATO_A1_SG";
+					init="GrpNATO_A1 = group this; [""ctu-shotgun"",this] call f_fnc_assignGear; comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_U_B_BLKBLK_CombatUniform"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""rhsusf_8Rnd_00Buck"";};  for ""_i"" from 1 to 2 do {this addItemToUniform ""rhsusf_mag_17Rnd_9x19_JHP"";};  this addVest ""TRYK_V_tacv1L_BK"";  for ""_i"" from 1 to 4 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_JHP"";};  for ""_i"" from 1 to 6 do {this addItemToVest ""rhsusf_8Rnd_00Buck"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_8Rnd_Slug"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_m67"";};  this addItemToVest ""rhs_mag_m7a3_cs"";  this addItemToVest ""rhs_mag_mk3a2"";  this addBackpack ""TRYK_B_BAF_BAG_BLK"";  this addItemToBackpack ""ACE_EarPlugs"";  this addItemToBackpack ""ACE_DefusalKit"";  for ""_i"" from 1 to 4 do {this addItemToBackpack ""ACE_CableTie"";};  this addItemToBackpack ""ACE_key_lockpick"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_morphine"";};  this addItemToBackpack ""ACE_wirecutter"";  this addItemToBackpack ""ACE_Clacker"";  this addItemToBackpack ""ACE_microDAGR"";  for ""_i"" from 1 to 4 do {this addItemToBackpack ""DemoCharge_Remote_Mag"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""rhs_mag_m7a3_cs"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""rhs_mag_an_m8hc"";};  this addItemToBackpack ""rhs_mag_mk3a2"";  this addItemToBackpack ""rhs_mag_m67"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""Chemlight_blue"";};  this addItemToBackpack ""Chemlight_red"";  this addItemToBackpack ""rhs_mag_an_m14_th3"";  this addItemToBackpack ""rhs_mag_mk84"";  this addHeadgear ""TRYK_H_PASGT_BLK"";  this addGoggles ""TRYK_kio_balaclava_ESS"";    comment ""Add weapons"";  this addWeapon ""rhs_weap_M590_8RD"";  this addWeapon ""rhsusf_weap_glock17g4"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""rhsusf_ANPVS_14"";    ";
+					description="NATO Alpha 1 Shotgunner";
+				};
+			};
+		};
+		class Item2
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={1785.8203,5.5,5726.8496};
+					azimut=99.620598;
+					id=7;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="UnitNATO_A2_FTL";
+					init="GrpNATO_A2 = group this; [""ctu-lead"",this] call f_fnc_assignGear; comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_U_B_BLKBLK_CombatUniform"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""hlc_30Rnd_556x45_B_AUG"";};  for ""_i"" from 1 to 3 do {this addItemToUniform ""rhsusf_mag_17Rnd_9x19_JHP"";};  this addVest ""TRYK_V_Sheriff_BA_TB"";  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_morphine"";};  this addItemToVest ""ACE_EarPlugs"";  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_CableTie"";};  this addItemToVest ""ACE_microDAGR"";  for ""_i"" from 1 to 4 do {this addItemToVest ""hlc_30Rnd_556x45_B_AUG"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";};  this addItemToVest ""ACE_HandFlare_Red"";  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_m18_green"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_mk84"";};  this addItemToVest ""Chemlight_green"";  this addHeadgear ""TRYK_H_PASGT_BLK"";  this addGoggles ""TRYK_Spset_PHC2_Glasses"";    comment ""Add weapons"";  this addWeapon ""hlc_rifle_auga2_b"";  this addPrimaryWeaponItem ""rhsusf_acc_compm4"";  this addWeapon ""rhsusf_weap_glock17g4"";  this addWeapon ""lerca_1200_black"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""tf_microdagr"";  this linkItem ""ItemGPS"";  this linkItem ""TRYK_G_bala_ess_NV"";    ";
+					description="NATO Alpha 2 Fireteam Leader";
+				};
+				class Item1
+				{
+					position[]={1783.4731,5.5,5724.4634};
+					azimut=99.620598;
+					id=8;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitNATO_A2_AR";
+					init="GrpNATO_A2 = group this; [""ctu-acr"",this] call f_fnc_assignGear; comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_U_B_BLKBLK_CombatUniform"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_quikclot"";};  for ""_i"" from 1 to 3 do {this addItemToUniform ""hlc_30Rnd_556x45_B_AUG"";};  for ""_i"" from 1 to 2 do {this addItemToUniform ""rhs_mag_an_m8hc"";};  this addVest ""TRYK_V_tacv1L_BK"";  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_CableTie"";};  this addItemToVest ""ACE_EarPlugs"";  this addItemToVest ""ACE_personalAidKit"";  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_m67"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_m7a3_cs"";};  this addItemToVest ""rhs_mag_mk3a2"";  for ""_i"" from 1 to 7 do {this addItemToVest ""hlc_30Rnd_556x45_B_AUG"";};  this addHeadgear ""TRYK_H_PASGT_BLK"";  this addGoggles ""TRYK_kio_balaclava_ESS"";    comment ""Add weapons"";  this addWeapon ""hlc_rifle_auga2carb_b"";  this addPrimaryWeaponItem ""rhsusf_acc_compm4"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""rhsusf_ANPVS_14"";    ";
+					description="NATO Alpha 2 Rifleman";
+				};
+				class Item2
+				{
+					position[]={1782.863,5.5,5721.4492};
+					azimut=99.620598;
+					id=9;
+					side="WEST";
+					vehicle="B_Soldier_lite_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitNATO_A2_AAR";
+					init="GrpNATO_A2 = group this; [""ctu-smg"",this] call f_fnc_assignGear; comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_U_B_BLKBLK_CombatUniform"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""hlc_30Rnd_9x19_B_MP5"";};  this addVest ""TRYK_V_tacv1L_BK"";  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_CableTie"";};  this addItemToVest ""ACE_EarPlugs"";  this addItemToVest ""ACE_personalAidKit"";  for ""_i"" from 1 to 7 do {this addItemToVest ""hlc_30Rnd_9x19_B_MP5"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_m67"";};  this addItemToVest ""rhs_mag_m7a3_cs"";  this addItemToVest ""rhs_mag_mk3a2"";  this addHeadgear ""TRYK_H_PASGT_BLK"";  this addGoggles ""TRYK_kio_balaclava_ESS"";    comment ""Add weapons"";  this addWeapon ""hlc_smg_mp5a4"";  this addPrimaryWeaponItem ""acc_flashlight"";  this addPrimaryWeaponItem ""rhsusf_acc_compm4"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""rhsusf_ANPVS_14"";  ";
+					description="NATO Alpha 2 Submachinegunner";
+				};
+				class Item3
+				{
+					position[]={1782.3033,5.5,5718.1846};
+					azimut=99.620598;
+					id=10;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitNATO_A2_AT";
+					init="GrpNATO_A2 = group this; [""ctu-shotgun"",this] call f_fnc_assignGear; comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_U_B_BLKBLK_CombatUniform"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""rhsusf_8Rnd_00Buck"";};  for ""_i"" from 1 to 2 do {this addItemToUniform ""rhsusf_mag_17Rnd_9x19_JHP"";};  this addVest ""TRYK_V_tacv1L_BK"";  for ""_i"" from 1 to 4 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_JHP"";};  for ""_i"" from 1 to 6 do {this addItemToVest ""rhsusf_8Rnd_00Buck"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_8Rnd_Slug"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""rhs_mag_m67"";};  this addItemToVest ""rhs_mag_m7a3_cs"";  this addItemToVest ""rhs_mag_mk3a2"";  this addBackpack ""TRYK_B_BAF_BAG_BLK"";  this addItemToBackpack ""ACE_EarPlugs"";  this addItemToBackpack ""ACE_DefusalKit"";  for ""_i"" from 1 to 4 do {this addItemToBackpack ""ACE_CableTie"";};  this addItemToBackpack ""ACE_key_lockpick"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_morphine"";};  this addItemToBackpack ""ACE_wirecutter"";  this addItemToBackpack ""ACE_Clacker"";  this addItemToBackpack ""ACE_microDAGR"";  for ""_i"" from 1 to 4 do {this addItemToBackpack ""DemoCharge_Remote_Mag"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""rhs_mag_m7a3_cs"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""rhs_mag_an_m8hc"";};  this addItemToBackpack ""rhs_mag_mk3a2"";  this addItemToBackpack ""rhs_mag_m67"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""Chemlight_blue"";};  this addItemToBackpack ""Chemlight_red"";  this addItemToBackpack ""rhs_mag_an_m14_th3"";  this addItemToBackpack ""rhs_mag_mk84"";  this addHeadgear ""TRYK_H_PASGT_BLK"";  this addGoggles ""TRYK_kio_balaclava_ESS"";    comment ""Add weapons"";  this addWeapon ""rhs_weap_M590_8RD"";  this addWeapon ""rhsusf_weap_glock17g4"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""rhsusf_ANPVS_14"";    ";
+					description="NATO Alpha 2 Shotgunner";
+				};
+			};
+		};
+		class Item3
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1804.9418,5.5,5712.2715};
+					azimut=99.620598;
+					id=11;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=0.60000002;
+					text="UnitNATO_AH1_P";
+					init="GrpNATO_AH1 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehNATO_AH1; comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_U_B_BLKBLK_CombatUniform"";  this addItemToUniform ""rhsusf_ANPVS_14"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""rhsusf_mag_17Rnd_9x19_JHP"";};  this addVest ""TRYK_V_tacv1_BK"";  this addItemToVest ""ACE_EarPlugs"";  this addItemToVest ""ACE_Kestrel4500"";  this addItemToVest ""ACE_DAGR"";  this addItemToVest ""ACE_CableTie"";  this addItemToVest ""ACE_ATragMX"";  this addItemToVest ""ACE_RangeCard"";  this addItemToVest ""ACE_microDAGR"";  for ""_i"" from 1 to 6 do {this addItemToVest ""rhsusf_5Rnd_300winmag_xm2010"";};  for ""_i"" from 1 to 4 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_JHP"";};  this addItemToVest ""rhs_mag_an_m8hc"";  this addItemToVest ""rhs_mag_m18_green"";  this addBackpack ""TRYK_B_tube_blk"";  this addItemToBackpack ""ACE_SpottingScope"";  this addItemToBackpack ""ACE_Tripod"";  this addHeadgear ""TRYK_H_PASGT_BLK"";  this addGoggles ""TRYK_kio_balaclava_BLK"";    comment ""Add weapons"";  this addWeapon ""rhs_weap_XM2010"";  this addPrimaryWeaponItem ""acc_pointer_IR"";  this addPrimaryWeaponItem ""optic_LRPS"";  this addPrimaryWeaponItem ""rhsusf_acc_harris_bipod"";  this addWeapon ""rhsusf_weap_glock17g4"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""tf_anprc152_3"";  this linkItem ""TRYK_US_ESS_Glasses_H"";    ";
+					description="NATO Attack Helo 1 Pilot";
+				};
+				class Item1
+				{
+					position[]={1804.7382,5.5,5711.5195};
+					azimut=99.620598;
+					id=12;
+					side="WEST";
+					vehicle="B_soldier_M_F";
+					player="PLAY CDG";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					text="UnitNATO_AH1_CP";
+					init="GrpNATO_AH1 = group this; [""ctu-sniper"",this] call f_fnc_assignGear; comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_U_B_BLKBLK_CombatUniform"";  this addItemToUniform ""rhsusf_ANPVS_14"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""rhsusf_mag_17Rnd_9x19_JHP"";};  this addVest ""TRYK_V_tacv1_BK"";  this addItemToVest ""ACE_EarPlugs"";  this addItemToVest ""ACE_Kestrel4500"";  this addItemToVest ""ACE_DAGR"";  this addItemToVest ""ACE_CableTie"";  this addItemToVest ""ACE_ATragMX"";  this addItemToVest ""ACE_RangeCard"";  this addItemToVest ""ACE_microDAGR"";  for ""_i"" from 1 to 6 do {this addItemToVest ""rhsusf_5Rnd_300winmag_xm2010"";};  for ""_i"" from 1 to 4 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_JHP"";};  this addItemToVest ""rhs_mag_an_m8hc"";  this addItemToVest ""rhs_mag_m18_green"";  this addBackpack ""TRYK_B_tube_blk"";  this addItemToBackpack ""ACE_SpottingScope"";  this addItemToBackpack ""ACE_Tripod"";  this addHeadgear ""TRYK_H_PASGT_BLK"";  this addGoggles ""TRYK_kio_balaclava_BLK"";    comment ""Add weapons"";  this addWeapon ""rhs_weap_XM2010"";  this addPrimaryWeaponItem ""acc_pointer_IR"";  this addPrimaryWeaponItem ""optic_LRPS"";  this addPrimaryWeaponItem ""rhsusf_acc_harris_bipod"";  this addWeapon ""rhsusf_weap_glock17g4"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""tf_anprc152_3"";  this linkItem ""TRYK_US_ESS_Glasses_H"";    ";
+					description="NATO Attack Helo 1 Gunner (Repair)";
+				};
+			};
+		};
+		class Item4
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1806.4801,5.5,5749.6338};
+					azimut=196.51778;
+					id=13;
+					side="CIV";
+					vehicle="C_man_polo_1_F";
+					leader=1;
+					skill=0.60000002;
+					init="this addAction [""Start Camera"",""[] call bis_fnc_camera;"",[],2,false,true,"""",""driver _target == _this""]; this allowDamage false;";
+					description="Mission Observer";
+				};
+			};
+		};
+		class Item5
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1799.6473,5.5,5751.9082};
+					azimut=196.51778;
+					id=14;
+					side="CIV";
+					vehicle="C_man_polo_2_F";
+					leader=1;
+					skill=0.60000002;
+					init="this addAction [""Start Camera"",""[] call bis_fnc_camera;"",[],2,false,true,"""",""driver _target == _this""]; this allowDamage false;";
+					description="Mission Observer";
+				};
+			};
+		};
+		class Item6
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1778.0947,5.5,5731.7368};
+					azimut=99.620644;
+					id=15;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="F3_preMount_NATO";
+					init="[synchronizedObjects this,[""GrpNATO_ASL"",""GrpNATO_A1"",""GrpNATO_A2"",""GrpNATO_A3""],true,false] call f_fnc_mountGroups;";
+				};
+			};
+		};
+		class Item7
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1781.767,5.5,5755.7969};
+					azimut=99.620644;
+					id=16;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="F3_preMount_NATO_3";
+					init="[synchronizedObjects this,[""GrpNATO_CO"",""GrpNATO_DC""],true,false] call f_fnc_mountGroups;";
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=9;
+		class Item0
+		{
+			position[]={2101.1848,6.5957036,5649.5391};
+			azimut=376.32776;
+			id=17;
+			side="EMPTY";
+			vehicle="Land_Obstacle_Saddle_F";
+			skill=0.60000002;
+		};
+		class Item1
+		{
+			position[]={1886.8392,5.6815109,5757.7651};
+			azimut=645.52679;
+			id=18;
+			side="EMPTY";
+			vehicle="B_Heli_Light_01_F";
+			skill=0.60000002;
+		};
+		class Item2
+		{
+			position[]={1876.2999,5.6649809,5765.3926};
+			azimut=-134.2085;
+			id=19;
+			side="EMPTY";
+			vehicle="rhsusf_m1025_w";
+			skill=0.60000002;
+		};
+		class Item3
+		{
+			position[]={1873.2676,5.6558976,5768.1763};
+			azimut=-134.2085;
+			id=20;
+			side="EMPTY";
+			vehicle="rhsusf_m1025_w";
+			skill=0.60000002;
+		};
+		class Item4
+		{
+			position[]={1868.6368,5.5282111,5738.6475};
+			azimut=-3.0333791;
+			id=21;
+			side="EMPTY";
+			vehicle="C_Offroad_01_F";
+			skill=0.60000002;
+		};
+		class Item5
+		{
+			position[]={1863.5387,5.5155511,5738.6816};
+			azimut=0.45899194;
+			id=22;
+			side="EMPTY";
+			vehicle="C_Offroad_01_F";
+			skill=0.60000002;
+		};
+		class Item6
+		{
+			position[]={1860.1603,5.5539451,5757.2573};
+			azimut=272.49402;
+			id=23;
+			side="EMPTY";
+			vehicle="B_MRAP_01_F";
+			skill=0.60000002;
+			text="VehNato_CAR1";
+			init="[""v_car"",this] call f_fnc_assignGear";
+		};
+		class Item7
+		{
+			position[]={1859.7327,5.5387392,5752.0303};
+			azimut=272.49402;
+			id=24;
+			side="EMPTY";
+			vehicle="B_MRAP_01_F";
+			skill=0.60000002;
+			text="VehNato_CAR2";
+			init="[""v_car"",this] call f_fnc_assignGear";
+		};
+		class Item8
+		{
+			position[]={1885.4603,5.629632,5743.1963};
+			azimut=-78.403946;
+			id=25;
+			side="EMPTY";
+			vehicle="RHS_UH1Y_UNARMED";
+			skill=0.60000002;
+		};
+	};
+	class Markers
+	{
+		items=3;
+		class Item0
+		{
+			position[]={9026.5449,-0.24390018,8266.9883};
+			name="f_insert";
+			text="insert";
+			type="mil_start";
+		};
+		class Item1
+		{
+			position[]={9026.4189,0.053612508,8198.6484};
+			name="f_extract";
+			text="extract";
+			type="mil_end";
+		};
+		class Item2
+		{
+			position[]={2851.3301,8.5193138,5888.0522};
+			name="mp_1_1";
+			text="1";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="FDiagonal";
+			a=40;
+			b=40;
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=10771198;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=1877862;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=9435240;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};

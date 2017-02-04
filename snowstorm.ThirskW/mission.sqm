@@ -1,0 +1,240 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"rhsusf_c_troops",
+		"thirskw",
+		"JO_Insurgent",
+		"opxplants",
+		"tb_alfr_units"
+	};
+	addOnsAuto[]=
+	{
+		"rhsusf_c_troops",
+		"JO_Insurgent",
+		"opxplants",
+		"tb_alfr_units",
+		"thirskw"
+	};
+	randomSeed=14661036;
+	class Intel
+	{
+		briefingName="snowstorm";
+		overviewText="v12";
+		startWeather=0.55000001;
+		startFog=0.38;
+		startWind=0.70999998;
+		startWindDir=50;
+		startWaves=0.099999994;
+		startGust=0.63999999;
+		forecastWeather=0.38;
+		forecastFog=0.38;
+		forecastWind=0.63;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
+		forecastGust=0.61000001;
+		windForced=1;
+		year=1991;
+		month=6;
+		day=16;
+		hour=11;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=3;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3456.5842,111.33105,3394.3325};
+					id=0;
+					side="WEST";
+					vehicle="rhsusf_usmc_marpat_wd_rifleman";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+					init="this setobjecttexture [0, ""textures\snowcamo.jpg""];this setobjecttexture [1, ""textures\snowcamo.jpg""];this setobjecttexture [2, ""textures\snowcamo.jpg""];removeheadgear this;";
+				};
+			};
+		};
+		class Item1
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1445.6086,47.333675,3351.7205};
+					azimut=-148.698;
+					id=1;
+					side="EAST";
+					vehicle="JO_Insurgent_R";
+					leader=1;
+					skill=0.60000002;
+					text="bear";
+					init="this allowdammage false;this setobjecttexture [0, """"];";
+				};
+			};
+		};
+		class Item2
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3466.6177,110.18011,3413.2026};
+					azimut=-152.991;
+					id=2;
+					side="WEST";
+					vehicle="rhsusf_usmc_marpat_wd_rifleman";
+					leader=1;
+					skill=0.60000002;
+					init="this setobjecttexture [0, ""textures\snowcamo.jpg""];this setobjecttexture [1, ""textures\snowcamo.jpg""];this setobjecttexture [2, ""textures\snowcamo.jpg""];removeheadgear this;";
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=2;
+		class Item0
+		{
+			position[]={1440.7074,47.479561,3345.5935};
+			azimut=-148.698;
+			id=3;
+			side="EMPTY";
+			vehicle="Land_jerabina";
+			leader=1;
+			skill=0.60000002;
+			init="this attachto [bear, [0,0,1]];";
+		};
+		class Item1
+		{
+			position[]={3472.6702,110.76366,3403.7598};
+			azimut=-109.6883;
+			id=4;
+			side="EMPTY";
+			vehicle="tb_alfr2bn_leo2ALF";
+			leader=1;
+			skill=0.60000002;
+			init="this setobjecttexture [0, ""textures\snowcamo.jpg""];this setobjecttexture [1, ""textures\snowcamo.jpg""];this setobjecttexture [2, ""textures\snowcamo.jpg""];";
+		};
+	};
+	class Markers
+	{
+		items=1;
+		class Item0
+		{
+			position[]={1441.8026,47.809002,3347.2878};
+			name="we";
+			type="Faction_RU";
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"thirskw"
+	};
+	addOnsAuto[]=
+	{
+		"thirskw"
+	};
+	randomSeed=15496753;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.1;
+		startFog=0.2;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.2;
+		forecastFog=0.2;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=1991;
+		month=3;
+		day=16;
+		hour=11;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"thirskw"
+	};
+	addOnsAuto[]=
+	{
+		"thirskw"
+	};
+	randomSeed=1004218;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.1;
+		startFog=0.2;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.2;
+		forecastFog=0.2;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=1991;
+		month=3;
+		day=16;
+		hour=11;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"thirskw"
+	};
+	addOnsAuto[]=
+	{
+		"thirskw"
+	};
+	randomSeed=4920200;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.1;
+		startFog=0.2;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.2;
+		forecastFog=0.2;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=1991;
+		month=3;
+		day=16;
+		hour=11;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
