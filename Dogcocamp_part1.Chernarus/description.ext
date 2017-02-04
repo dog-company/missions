@@ -1,0 +1,49 @@
+Author 				 = "4ner";
+OnLoadName 			 = "Destablise Chernarus";
+OnLoadMission 		 = "Prepare Chernarus, for the upcoming invasion.";
+onLoadMissionTime 	 = 0;
+overviewText 		 = Prepare Chernarus, for the upcoming invasion.;
+
+allowFunctionsLog    = 1;
+
+class CfgFunctions 
+{
+	class COB 
+	{
+		class functions 
+		{
+			class HALO {file = "COB_HALO\functions\fn_halo.sqf"};
+			class paradrop {file = "COB_HALO\functions\fn_paradrop.sqf"};
+		};
+	};
+};
+
+class CfgSounds 
+{
+	sounds[] = {}; 
+	class C130_exit 
+	{
+		sound[] = {"COB_HALO\sounds\C130_exit.wss", 50, 1};
+		titles[] = {};
+	};
+	class flapping 
+	{
+		sound[] = {"COB_HALO\sounds\flapping.ogg", 10, 1};
+		titles[] = {};
+	};
+	class open_chute 
+	{
+		sound[] = {"COB_HALO\sounds\open_chute.ogg", 10, 1};
+		titles[] = {};
+	};
+	class para_pilot 
+	{
+		sound[] = {"COB_HALO\sounds\para_pilot.ogg", 10, 1};
+		titles[] = {};
+	};
+	class close_chute 
+	{
+		sound[] = {"COB_HALO\sounds\close_chute.ogg", 10, 1};
+		titles[] = {};
+	};
+};

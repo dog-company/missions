@@ -1,0 +1,170 @@
+version=51;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=7;
+	};
+	class Camera
+	{
+		pos[]={1612.0679,15.811717,1607.3025};
+		dir[]={0.13879149,-0.39920148,0.90639549};
+		up[]={0.06043373,0.91683072,0.39465657};
+		aside[]={0.98856896,-6.3258631e-007,-0.15137526};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Characters_F_OPFOR",
+	"a3_characters_f",
+	"A3_Air_F_Heli_Heli_Transport_04"
+};
+randomSeed=4979869;
+class ScenarioData
+{
+	author="Cheeki Breeki";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.15000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.15000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2010;
+		month=7;
+		day=6;
+		hour=10;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Entities
+	{
+		items=2;
+		class Item0
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1614.8586,6.0014277,1630.125};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=4;
+					type="O_helipilot_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1614.8586,8.756526,1630.1125};
+					};
+					side="East";
+					class Attributes
+					{
+					};
+					id=5;
+					type="O_helipilot_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1614.8586,8.756526,1630.1125};
+					};
+					side="East";
+					class Attributes
+					{
+					};
+					id=6;
+					type="O_helicrew_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=4;
+						item1=3;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=5;
+						item1=3;
+						class CustomData
+						{
+							role=2;
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=6;
+						item1=3;
+						class CustomData
+						{
+							role=2;
+						};
+					};
+				};
+			};
+			id=2;
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1614.8586,8.7550869,1630.0625};
+			};
+			side="East";
+			flags=2;
+			class Attributes
+			{
+			};
+			id=3;
+			type="O_Heli_Transport_04_F";
+		};
+	};
+};
