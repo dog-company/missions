@@ -1,10 +1,10 @@
-// Dog Company Loadouts by 4ner 
+// Dog Company Loadouts by 4ner
 //................................
 
 // Teamleader loadout
 
 waitUntil {!isNull player};
-private ["_unit", "_primaryMag", "_secondaryMag", "_flashbang"]
+private ["_unit", "_primaryMag", "_secondaryMag", "_flashbang"];
 _unit = _this select 0;
 _primaryMag = "SMA_30Rnd_556x45_M855A1_Tracer";
 _secondaryMag = "11Rnd_45ACP_Mag";
