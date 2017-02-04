@@ -59,5 +59,5 @@ _unit addHeadgear "milgp_h_airframe_Combat_rgr";
 Comment "Items";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
-_unit linkItem "TFAR_anprc152";
+_unit linkItem "tf_anprc152";
 _unit linkItem "NVGoggles_OPFOR";
