@@ -15,3 +15,9 @@
 // However, if you specify "BLUE1", "NAVYBLUE10" will also be ignored
 
 [true,30,false,true,30,3,true,[]] execVM "WerthlesHeadless.sqf";
+
+[] spawn {
+	scriptName "initMission.hpp: mission start";
+	["rsc\DC_intro.ogv"] spawn BIS_fnc_titlecard;	
+	waitUntil {!(isNil "BIS_fnc_titlecard_finished")}; 
+};
