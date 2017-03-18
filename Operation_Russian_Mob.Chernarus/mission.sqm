@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11517.035,293.56598,12130.213};
-		dir[]={-0.4219124,-0.34175217,0.83990264};
-		up[]={-0.15344079,0.93972701,0.30545321};
-		aside[]={0.89368987,-1.17952e-006,0.44893616};
+		pos[]={11610.78,227.73553,11841.401};
+		dir[]={0.7231487,-0.11139672,-0.68166071};
+		up[]={0.081064932,0.99377608,-0.076414309};
+		aside[]={-0.6859293,1.5075784e-007,-0.72767693};
 	};
 };
 binarizationWanted=0;
@@ -421,6 +421,33 @@ randomSeed=2887624;
 class ScenarioData
 {
 	author="Mr.Mittens";
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
@@ -19217,10 +19244,10 @@ class Mission
 		class Item214
 		{
 			dataType="Trigger";
-			position[]={4486.395,339,10717.679};
+			position[]={4483.147,339,10716.37};
 			class Attributes
 			{
-				condition="({alive _x;} count switchableUnits) == ({_x in helicopter_2;} count switchableUnits)";
+				condition="({alive _x;} count allPlayers) == ({_x in helicopter_2;} count allPlayers)";
 				sizeA=0;
 				sizeB=0;
 				type="SWITCH";
