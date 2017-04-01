@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=989;
+		nextID=991;
 	};
 	class LayerIndexProvider
 	{
-		nextID=37;
+		nextID=46;
 	};
 	class Camera
 	{
-		pos[]={9747.3691,59.897346,14452.586};
-		dir[]={0.41177076,-0.28498486,-0.8656382};
-		up[]={0.12245138,0.95850646,-0.25742105};
-		aside[]={-0.90308166,-1.2924429e-006,-0.42958164};
+		pos[]={9747.3691,183.30905,14452.586};
+		dir[]={0.030819656,-0.99211651,-0.12190845};
+		up[]={0.24315564,0.12563279,-0.96181291};
+		aside[]={-0.96954703,-4.3347245e-007,-0.24510948};
 	};
 };
 binarizationWanted=0;
@@ -68,13 +68,15 @@ addons[]=
 	"A3_Modules_F",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Signs_F",
-	"A3_Weapons_F_Explosives"
+	"A3_Weapons_F_Explosives",
+	"A3_Data_F_Curator_Virtual",
+	"ace_advanced_fatigue"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=25;
+		items=27;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -247,6 +249,20 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item25
+		{
+			className="A3_Data_F_Curator";
+			name="Arma 3 Zeus Update - Main Configuration";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item26
+		{
+			className="ace_advanced_fatigue";
+			name="ACE3 - Advanced Fatigue";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
 	};
 };
 randomSeed=657096;
@@ -280,7 +296,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=162;
+		items=164;
 		class Item0
 		{
 			dataType="Layer";
@@ -8493,7 +8509,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={12526.226,169.965,12683.054};
-			angle=6.0958219;
+			angle=6.0958214;
 			class Attributes
 			{
 				sizeA=5;
@@ -16756,16 +16772,137 @@ class Mission
 			id=868;
 			atlOffset=-0.15192413;
 		};
+		class Item162
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9744.3818,48.924927,14456.503};
+			};
+			id=989;
+			type="VirtualCurator_F";
+			atlOffset=-0.0048789978;
+		};
+		class Item163
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9736.7031,49.313301,14445.125};
+			};
+			id=990;
+			type="ace_advanced_fatigue_moduleSettings";
+			atlOffset=-0.0020065308;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_advanced_fatigue_moduleSettings_TerrainGradientFactor";
+					expression="_this setVariable ['TerrainGradientFactor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_advanced_fatigue_moduleSettings_Enabled";
+					expression="_this setVariable ['Enabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ace_advanced_fatigue_moduleSettings_RecoveryFactor";
+					expression="_this setVariable ['RecoveryFactor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_advanced_fatigue_moduleSettings_LoadFactor";
+					expression="_this setVariable ['LoadFactor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ace_advanced_fatigue_moduleSettings_PerformanceFactor";
+					expression="_this setVariable ['PerformanceFactor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=12;
+			nextID=13;
 		};
 		class Links
 		{
-			items=12;
+			items=13;
 			class Item0
 			{
 				linkID=0;
@@ -16881,6 +17018,16 @@ class Mission
 				linkID=11;
 				item0=423;
 				item1=424;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item12
+			{
+				linkID=12;
+				item0=989;
+				item1=521;
 				class CustomData
 				{
 					type="Sync";
