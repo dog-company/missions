@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=160;
+		nextID=170;
 	};
 	class Camera
 	{
-		pos[]={21375.646,41.338135,16490.098};
-		dir[]={-0.9190625,-0.32856062,-0.21827109};
-		up[]={-0.31975803,0.94446892,-0.075936884};
-		aside[]={-0.23107976,2.5448389e-007,0.97302699};
+		pos[]={21484.045,45.313587,16375.799};
+		dir[]={-0.51932949,-0.38436279,-0.76343489};
+		up[]={-0.2162336,0.92316782,-0.31786603};
+		aside[]={-0.82689416,2.757879e-007,0.56250912};
 	};
 };
 binarizationWanted=0;
@@ -115,6 +115,10 @@ addons[]=
 	"A3_Structures_F_Orange_Signs_Special",
 	"A3_Armor_F_EPB_APC_Tracked_03",
 	"A3_Characters_F_Exp_Civil",
+	"rhsusf_c_weapons",
+	"ace_compat_rhs_usf3",
+	"A3_Weapons_F",
+	"ace_goggles",
 	"rhsusf_c_fmtv",
 	"A3_Modules_F_Curator_Mines",
 	"A3_Soft_F_Beta_Truck_02"
@@ -123,7 +127,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=52;
+		items=55;
 		class Item0
 		{
 			className="A3_Structures_F_Heli";
@@ -482,6 +486,27 @@ class AddonsMetaData
 			url="https://www.arma3.com";
 		};
 		class Item51
+		{
+			className="rhsusf_c_weapons";
+			name="RHSUSF Weapons & Accessories";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item52
+		{
+			className="ace_compat_rhs_usf3";
+			name="ACE3 - RHS USF Compatibility";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item53
+		{
+			className="ace_goggles";
+			name="ACE3 - Goggles";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item54
 		{
 			className="rhsusf_c_fmtv";
 			name="FMTV Trucks";
@@ -20348,25 +20373,53 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22181.098,16.492844,16227.051};
+						position[]={22181.453,16.49272,16227.209};
 						angles[]={0,0.02992304,0};
 					};
 					side="Civilian";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						stance="Middle";
+						class Inventory
+						{
+							class handgun
+							{
+								name="rhsusf_weap_m9";
+								class primaryMuzzleMag
+								{
+									name="rhsusf_mag_15Rnd_9x19_JHP";
+									ammoLeft=15;
+								};
+							};
+							class uniform
+							{
+								typeName="U_C_Poloshirt_stripped";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhsusf_mag_15Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=15;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+						};
 					};
 					id=3106;
 					type="C_man_1";
-					atlOffset=3.0402336;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=3105;
-			atlOffset=3.0402336;
 		};
 		class Item336
 		{
@@ -20391,14 +20444,12 @@ class Mission
 					};
 					id=3108;
 					type="C_man_1";
-					atlOffset=0.14558983;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=3107;
-			atlOffset=0.14558983;
 		};
 		class Item337
 		{
@@ -20423,14 +20474,12 @@ class Mission
 					};
 					id=3118;
 					type="C_man_1";
-					atlOffset=0.13312244;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=3117;
-			atlOffset=0.13312244;
 		};
 		class Item338
 		{
@@ -20455,14 +20504,12 @@ class Mission
 					};
 					id=3130;
 					type="C_man_1";
-					atlOffset=0.11706543;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=3129;
-			atlOffset=0.11706543;
 		};
 		class Item339
 		{
@@ -20519,14 +20566,12 @@ class Mission
 					};
 					id=3134;
 					type="C_man_1";
-					atlOffset=0.17397308;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=3133;
-			atlOffset=0.17397308;
 		};
 		class Item341
 		{
@@ -20738,6 +20783,36 @@ class Mission
 					class Attributes
 					{
 						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m4";
+								class primaryMuzzleMag
+								{
+									name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="U_C_Poloshirt_stripped";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+						};
 					};
 					id=3152;
 					type="C_man_1";
@@ -20768,6 +20843,36 @@ class Mission
 					class Attributes
 					{
 						stance="Middle";
+						class Inventory
+						{
+							class handgun
+							{
+								name="rhsusf_weap_m9";
+								class primaryMuzzleMag
+								{
+									name="rhsusf_mag_15Rnd_9x19_JHP";
+									ammoLeft=15;
+								};
+							};
+							class uniform
+							{
+								typeName="U_C_Poloshirt_stripped";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhsusf_mag_15Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=15;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+						};
 					};
 					id=3154;
 					type="C_man_1";
@@ -20832,6 +20937,37 @@ class Mission
 					class Attributes
 					{
 						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m4_mstock";
+								class primaryMuzzleMag
+								{
+									name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="U_C_Poloshirt_stripped";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+										count=1;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							goggles="G_Sport_Red";
+						};
 					};
 					id=3158;
 					type="C_man_1";
@@ -21008,6 +21144,36 @@ class Mission
 					class Attributes
 					{
 						stance="Middle";
+						class Inventory
+						{
+							class handgun
+							{
+								name="rhsusf_weap_m9";
+								class primaryMuzzleMag
+								{
+									name="rhsusf_mag_15Rnd_9x19_JHP";
+									ammoLeft=15;
+								};
+							};
+							class uniform
+							{
+								typeName="U_C_Poloshirt_stripped";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhsusf_mag_15Rnd_9x19_JHP";
+										count=2;
+										ammoLeft=15;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+						};
 					};
 					id=3164;
 					type="C_man_1";
@@ -21070,6 +21236,36 @@ class Mission
 					class Attributes
 					{
 						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m4_pmag";
+								class primaryMuzzleMag
+								{
+									name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="U_C_Poloshirt_stripped";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+										count=1;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+						};
 					};
 					id=3168;
 					type="C_man_1";
