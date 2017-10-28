@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=957;
+		nextID=958;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=39;
+		nextID=44;
 	};
 	class Camera
 	{
-		pos[]={5607.9727,545.38745,10397.857};
-		dir[]={0.29833296,-0.60183346,-0.74098516};
-		up[]={0.224782,0.79862958,-0.55829793};
-		aside[]={-0.92769057,5.0954986e-007,-0.37351128};
+		pos[]={5624.0239,533.41211,10376.985};
+		dir[]={-0.75711018,-0.55587077,0.34359446};
+		up[]={-0.50620878,0.83127189,0.22972642};
+		aside[]={0.41327623,9.1642141e-007,0.91067123};
 	};
 };
 binarizationWanted=0;
@@ -80,13 +80,18 @@ addons[]=
 	"ace_refuel",
 	"ace_repair",
 	"ace_rearm",
-	"ace_spectator"
+	"ace_spectator",
+	"ace_common",
+	"ace_flashsuppressors",
+	"ace_grenades",
+	"ace_parachute",
+	"ace_minedetector"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=36;
+		items=41;
 		class Item0
 		{
 			className="rhsusf_c_troops";
@@ -331,6 +336,41 @@ class AddonsMetaData
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
+		class Item36
+		{
+			className="ace_common";
+			name="ACE3 - Common";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item37
+		{
+			className="ace_flashsuppressors";
+			name="ACE3 - Flash Suppressors";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item38
+		{
+			className="ace_grenades";
+			name="ACE3 - Grenades";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item39
+		{
+			className="ace_parachute";
+			name="ACE3 - Parachute";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item40
+		{
+			className="ace_minedetector";
+			name="ACE3 - Mine Detector";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
 	};
 };
 randomSeed=8930392;
@@ -360,7 +400,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=70;
+		items=71;
 		class Item0
 		{
 			dataType="Group";
@@ -6674,7 +6714,7 @@ class Mission
 			name="marker_3";
 			text="FOB Avis";
 			type="mil_ambush";
-			angle=92.670975;
+			angle=92.670967;
 			id=940;
 			atlOffset=-452.57098;
 		};
@@ -6899,6 +6939,22 @@ class Mission
 				};
 				nAttributes=4;
 			};
+		};
+		class Item70
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5614.8687,527.02332,10363.23};
+				angles[]={0.048009139,0,6.2808437};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=957;
+			type="ACE_Box_Misc";
 		};
 	};
 	class Connections
