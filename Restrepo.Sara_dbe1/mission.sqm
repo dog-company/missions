@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=80;
+		nextID=93;
 	};
 	class Camera
 	{
-		pos[]={7805.7861,58.388237,15901.37};
-		dir[]={-0.6793344,-0.71417677,0.16947697};
-		up[]={-0.69296592,0.6999622,0.17287378};
-		aside[]={0.24207883,1.6756821e-006,0.97035241};
+		pos[]={7905.8579,203.63225,15837.911};
+		dir[]={-0.24834304,-0.23156938,0.94072479};
+		up[]={-0.059143413,0.97280604,0.22401851};
+		aside[]={0.96696472,1.241453e-006,0.25526917};
 	};
 };
 binarizationWanted=0;
@@ -17552,13 +17552,16 @@ class Mission
 				class Item2
 				{
 					dataType="Waypoint";
-					position[]={11228.949,27.657221,12369.702};
+					position[]={11228.949,27.657223,12369.702};
+					expCond="call{true}";
+					expActiv="call{vehicle this setFuel 1;}";
 					class Effects
 					{
 					};
 					showWP="NEVER";
 					id=2077;
 					type="Move";
+					atlOffset=1.9073486e-006;
 				};
 				class Item3
 				{
@@ -17588,6 +17591,8 @@ class Mission
 				{
 					dataType="Waypoint";
 					position[]={14552.681,88.342186,10196.424};
+					expCond="call{true}";
+					expActiv="call{vehicle this setFuel 1;}";
 					class Effects
 					{
 					};
@@ -22837,7 +22842,7 @@ class Mission
 					};
 					id=3347;
 					type="Land_PowerGenerator_F";
-					atlOffset=0.027565002;
+					atlOffset=0.027282715;
 				};
 				class Item5
 				{
@@ -27140,7 +27145,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={7805.5898,36.263065,15894.147};
-						angles[]={-0,4.853343,6.247201};
+						angles[]={0,4.853343,6.247201};
 					};
 					side="Empty";
 					flags=4;
@@ -27157,7 +27162,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={7804.3428,36.302948,15892.403};
-						angles[]={-0,2.4413502,6.247201};
+						angles[]={0,2.4413502,6.247201};
 					};
 					side="Empty";
 					flags=4;
