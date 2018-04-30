@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2102;
+		nextID=2104;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=90;
+		nextID=95;
 	};
 	class Camera
 	{
@@ -60,9 +60,9 @@ addons[]=
 	"A3_Data_F_Curator_Virtual",
 	"CUP_CAStructures_E_HouseA_A_Office01",
 	"rhsusf_vehicles",
-	"rhsusf_c_m113",
 	"A3_Modules_F_Curator_Multiplayer",
-	"RHS_US_A2_AirImport"
+	"RHS_US_A2_AirImport",
+	"rhsusf_c_m113"
 };
 class AddonsMetaData
 {
@@ -253,22 +253,22 @@ class AddonsMetaData
 		};
 		class Item28
 		{
-			className="rhsusf_c_m113";
-			name="M113A3 APC";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item29
-		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item30
+		class Item29
 		{
 			className="RHS_US_A2_AirImport";
 			name="RHSUSF A2 Air Ports";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item30
+		{
+			className="rhsusf_c_m113";
+			name="M113A3 APC";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
@@ -2740,6 +2740,7 @@ class Mission
 			};
 			id=1538;
 			type="rhsusf_weapon_crate";
+			atlOffset=0.19438934;
 		};
 		class Item24
 		{
@@ -2840,6 +2841,7 @@ class Mission
 			};
 			id=1543;
 			type="ACE_Box_Misc";
+			atlOffset=0.24151611;
 		};
 		class Item29
 		{
@@ -2855,6 +2857,7 @@ class Mission
 			};
 			id=1544;
 			type="ACE_Box_Misc";
+			atlOffset=0.21577454;
 		};
 		class Item30
 		{
@@ -8293,38 +8296,6 @@ class Mission
 		};
 		class Item77
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={1406.8862,43.791492,899.63806};
-				angles[]={6.270689,3.2305982,0.0075011365};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=2063;
-			type="rhsusf_m113d_usarmy_M240";
-		};
-		class Item78
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={1411.2476,43.813,899.25098};
-				angles[]={6.2731848,3.2305982,0.0049914722};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=2064;
-			type="rhsusf_m113d_usarmy_M240";
-		};
-		class Item79
-		{
 			dataType="Logic";
 			class PositionInfo
 			{
@@ -8414,7 +8385,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item80
+		class Item78
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -8714,7 +8685,7 @@ class Mission
 				nAttributes=15;
 			};
 		};
-		class Item81
+		class Item79
 		{
 			dataType="Group";
 			side="West";
@@ -8783,8 +8754,9 @@ class Mission
 				{
 					dataType="Waypoint";
 					position[]={1322.948,40.635853,916.19501};
-					type="TransportUnload";
-					speed="NORMAL";
+					type="Land";
+					speed="FULL";
+					script="A3\functions_f\waypoints\fn_wpLand.sqf";
 					class Effects
 					{
 					};
@@ -8798,16 +8770,15 @@ class Mission
 				{
 					dataType="Waypoint";
 					position[]={6556.8242,59.045475,605.95398};
-					type="TransportUnload";
 					speed="FULL";
+					expCond="call{true}";
+					expActiv="call{""EveryoneWins"" call BIS_fnc_endMissionServer;}";
 					class Effects
 					{
 					};
-					timeoutMin=60;
-					timeoutMid=60;
-					timeoutMax=60;
 					showWP="NEVER";
 					id=2092;
+					type="Move";
 				};
 			};
 			class Attributes
@@ -8874,7 +8845,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item82
+		class Item80
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8954,6 +8925,86 @@ class Mission
 					};
 				};
 				nAttributes=3;
+			};
+		};
+		class Item81
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1406.8866,43.791565,899.64447};
+				angles[]={6.270689,3.2305982,0.0075011365};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2102;
+			type="rhsusf_m113d_usarmy_unarmed";
+			atlOffset=-1.1444092e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit"",""Medikit""],[4,10,2]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_M433_HEDP"",""rhsusf_100Rnd_556x45_soft_pouch"",""rhs_mag_M441_HE"",""rhs_mag_m714_White"",""rhs_mag_m662_red"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[50,20,11,20,8,4,10,4,4,10]],[[""ToolKit""],[1]],[[""rhsusf_falconii""],[4]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item82
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1411.248,43.813061,899.25732};
+				angles[]={6.2731848,3.2305982,0.0049914722};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2103;
+			type="rhsusf_m113d_usarmy_unarmed";
+			atlOffset=-3.8146973e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit"",""Medikit""],[4,10,2]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_M433_HEDP"",""rhsusf_100Rnd_556x45_soft_pouch"",""rhs_mag_M441_HE"",""rhs_mag_m714_White"",""rhs_mag_m662_red"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[50,20,11,20,8,4,10,4,4,10]],[[""ToolKit""],[1]],[[""rhsusf_falconii""],[4]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};
