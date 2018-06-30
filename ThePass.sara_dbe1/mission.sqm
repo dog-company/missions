@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12314.709,230.50252,14872.06};
-		dir[]={0.83958811,-0.30089793,0.45242742};
-		up[]={0.26501933,0.95360547,0.1428104};
-		aside[]={0.47441581,1.4866891e-006,-0.88038427};
+		pos[]={12369.984,283.78351,14875.831};
+		dir[]={0.47291371,-0.61544818,0.63065141};
+		up[]={0.36929154,0.78809583,0.49246654};
+		aside[]={0.80010843,7.1886461e-009,-0.59998155};
 	};
 };
 binarizationWanted=0;
@@ -1205,6 +1205,7 @@ class Mission
 					};
 					id=53;
 					type="B_soldierW_LAT_F";
+					atlOffset=0.00021362305;
 				};
 				class Item3
 				{
@@ -1349,6 +1350,7 @@ class Mission
 				};
 			};
 			id=59;
+			atlOffset=-0.0049133301;
 		};
 		class Item14
 		{
@@ -1365,6 +1367,7 @@ class Mission
 			};
 			id=60;
 			type="B_HMG_01_high_F";
+			atlOffset=-0.0049133301;
 		};
 		class Item15
 		{
@@ -4651,11 +4654,49 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
-						nAttributes=1;
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03PER";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -4783,7 +4824,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -4824,7 +4865,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -4864,7 +4905,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -5021,7 +5062,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -5190,7 +5231,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -5230,7 +5271,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -5270,7 +5311,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -6619,7 +6660,7 @@ class Mission
 			colorName="ColorEAST";
 			a=336.82101;
 			b=25.677;
-			angle=210.04173;
+			angle=210.04172;
 			id=367;
 			atlOffset=9.6434021;
 		};
@@ -6647,7 +6688,7 @@ class Mission
 			colorName="ColorEAST";
 			a=336.82101;
 			b=25.677;
-			angle=105.25519;
+			angle=105.25518;
 			id=369;
 			atlOffset=-56.053192;
 		};
@@ -6703,7 +6744,7 @@ class Mission
 			colorName="ColorEAST";
 			a=336.82101;
 			b=25.677;
-			angle=102.35525;
+			angle=102.35524;
 			id=373;
 			atlOffset=9.8913879;
 		};
