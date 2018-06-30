@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=384;
+		nextID=386;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12369.984,283.78351,14875.831};
-		dir[]={0.47291371,-0.61544818,0.63065141};
-		up[]={0.36929154,0.78809583,0.49246654};
-		aside[]={0.80010843,7.1886461e-009,-0.59998155};
+		pos[]={12389.013,207.76089,14992.118};
+		dir[]={0.8430075,-0.53475124,0.059548553};
+		up[]={0.53354758,0.84492785,0.037687972};
+		aside[]={0.070471659,1.344597e-007,-0.99760038};
 	};
 };
 binarizationWanted=0;
@@ -77,13 +77,14 @@ addons[]=
 	"A3_Characters_F_Mark",
 	"acex_headless",
 	"A3_Data_F_Curator_Virtual",
-	"A3_Modules_F_Curator_Curator"
+	"A3_Modules_F_Curator_Curator",
+	"A3_Modules_F_Multiplayer"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=40;
+		items=41;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -361,6 +362,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item40
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=13299939;
@@ -437,7 +445,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=107;
+		items=108;
 		class Item0
 		{
 			dataType="Group";
@@ -5822,6 +5830,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="call{[_veh,[[[[""FirstAidKit""],[10]],[[""HandGrenade"",""MiniGrenade"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokePurple_Grenade_shell"",""SmokeShell"",""SmokeShellGreen"",""SmokeShellOrange"",""SmokeShellPurple"",""30Rnd_65x39_caseless_green"",""10Rnd_762x54_Mag"",""150Rnd_762x54_Box"",""Vorona_HE"",""Vorona_HEAT""],[6,6,6,3,3,3,3,8,8,8,8,40,20,10,10,10]],[[""ACE_fieldDressing"",""ACE_EarPlugs"",""ACE_epinephrine"",""ACE_morphine""],[100,50,50,50]],[[],[]]],false]] call bis_fnc_initAmmoBox;" \n "_nul = [this, 120, 60] execVM ""vehRespawn.sqf"";}";
 				name="ALiVE_SUP_MULTISPAWN_RESPAWNVEHICLE_OPF_F";
 				textures="Guerilla_03";
 			};
@@ -6660,7 +6669,7 @@ class Mission
 			colorName="ColorEAST";
 			a=336.82101;
 			b=25.677;
-			angle=210.04172;
+			angle=210.04167;
 			id=367;
 			atlOffset=9.6434021;
 		};
@@ -6688,7 +6697,7 @@ class Mission
 			colorName="ColorEAST";
 			a=336.82101;
 			b=25.677;
-			angle=105.25518;
+			angle=105.25511;
 			id=369;
 			atlOffset=-56.053192;
 		};
@@ -6744,7 +6753,7 @@ class Mission
 			colorName="ColorEAST";
 			a=336.82101;
 			b=25.677;
-			angle=102.35524;
+			angle=102.35523;
 			id=373;
 			atlOffset=9.8913879;
 		};
@@ -7033,6 +7042,231 @@ class Mission
 					};
 				};
 				nAttributes=4;
+			};
+		};
+		class Item107
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12421.949,180,14998.333};
+			};
+			id=384;
+			type="ModuleRespawnVehicle_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleRespawnVehicle_F_ForcedRespawn";
+					expression="_this setVariable ['ForcedRespawn',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleRespawnVehicle_F_Init";
+					expression="_this setVariable ['Init',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleRespawnVehicle_F_RespawnWhenDisabled";
+					expression="_this setVariable ['RespawnWhenDisabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleRespawnVehicle_F_DesertedDistance";
+					expression="_this setVariable ['DesertedDistance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleRespawnVehicle_F_PositionType";
+					expression="_this setVariable ['PositionType',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ModuleRespawnVehicle_F_RespawnCount";
+					expression="_this setVariable ['RespawnCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ModuleRespawnVehicle_F_Position";
+					expression="_this setVariable ['Position',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ModuleRespawnVehicle_F_Wreck";
+					expression="_this setVariable ['Wreck',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="2";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ModuleRespawnVehicle_F_Delay";
+					expression="_this setVariable ['Delay',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="120";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ModuleRespawnVehicle_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="1";
+						};
+					};
+				};
+				nAttributes=10;
+			};
+		};
+	};
+	class Connections
+	{
+		class LinkIDProvider
+		{
+			nextID=1;
+		};
+		class Links
+		{
+			items=1;
+			class Item0
+			{
+				linkID=0;
+				item0=384;
+				item1=341;
+				class CustomData
+				{
+					type="Sync";
+				};
 			};
 		};
 	};
