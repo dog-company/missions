@@ -8,14 +8,14 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=485;
+		nextID=494;
 	};
 	class Camera
 	{
 		pos[]={7981.6978,302.39557,7905.7515};
-		dir[]={0.86352187,-0.44304088,-0.24097113};
-		up[]={0.4267399,0.89649963,-0.1190843};
-		aside[]={-0.26879078,7.2541297e-008,-0.96320915};
+		dir[]={0.26151052,-0.41203171,-0.87285483};
+		up[]={0.11825453,0.91116554,-0.39470321};
+		aside[]={-0.9579438,2.1183223e-007,-0.28700206};
 	};
 };
 binarizationWanted=0;
@@ -23,13 +23,17 @@ addons[]=
 {
 	"A3_Modules_F_Warlords",
 	"rhsusf_c_troops",
-	"rhs_c_troops"
+	"rhs_c_troops",
+	"A3_Data_F_Curator_Virtual",
+	"A3_Modules_F_Curator_Curator",
+	"FIR_F15_F",
+	"JS_JC_FA18"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=3;
+		items=7;
 		class Item0
 		{
 			className="A3_Modules_F_Warlords";
@@ -50,6 +54,31 @@ class AddonsMetaData
 			name="AFRF Infantry & Equipment";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
+		};
+		class Item3
+		{
+			className="A3_Data_F_Curator";
+			name="Arma 3 Zeus Update - Main Configuration";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item5
+		{
+			className="FIR_F15_F";
+			name="FIR_F15_F";
+		};
+		class Item6
+		{
+			className="JS_JC_FA18";
+			name="JS_JC_FA18";
+			author="F/A-18E/F Super Hornet Team";
 		};
 	};
 };
@@ -133,7 +162,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=54;
+		items=63;
 		class Item0
 		{
 			dataType="Logic";
@@ -5100,6 +5129,224 @@ class Mission
 			{
 			};
 			id=484;
+		};
+		class Item54
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={10923.643,48.699619,10459.937};
+			};
+			isPlayable=1;
+			id=485;
+			type="VirtualCurator_F";
+			atlOffset=-3.8146973e-006;
+		};
+		class Item55
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11244.604,-0.015001297,10743.137};
+			};
+			id=486;
+			type="ModuleCurator_F";
+			atlOffset=19.514999;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="#adminLogged";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item56
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19237.65,14.121639,14068.367};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=487;
+			type="FIR_F15C_Blank";
+		};
+		class Item57
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19251.08,14.078602,14067.888};
+				angles[]={0.00635705,0,6.2758856};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=488;
+			type="FIR_F15D_Blank";
+		};
+		class Item58
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19236.619,14.108557,14048.271};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=489;
+			type="FIR_F15E_Blank";
+		};
+		class Item59
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19258.791,14.131783,14043.597};
+				angles[]={6.2790856,0,0.0038291984};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=490;
+			type="FIR_F15J_303TFS_TACMEET";
+		};
+		class Item60
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19251.578,14.14554,14029.689};
+				angles[]={6.2784138,0,0.0010918301};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=491;
+			type="FIR_F15K_1st";
+		};
+		class Item61
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19213.076,14.195006,14069.18};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=492;
+			type="JS_JC_FA18E";
+		};
+		class Item62
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19207.322,14.268469,14040.032};
+				angles[]={0.0022375863,0,6.2809477};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=493;
+			type="JS_JC_FA18F";
 		};
 	};
 	class Connections
