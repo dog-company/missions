@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2251.6711,56.634026,1339.0725};
-		dir[]={0.41198921,-0.5544765,-0.72307205};
-		up[]={0.27449891,0.83220005,-0.48176613};
-		aside[]={-0.86886865,4.3619366e-008,-0.49506003};
+		pos[]={1738.2511,88.54248,8712.2461};
+		dir[]={0.10189929,-0.6383633,0.76297653};
+		up[]={0.084506974,0.76973176,0.63274789};
+		aside[]={0.99121124,1.6612466e-007,-0.1323818};
 	};
 };
 binarizationWanted=0;
@@ -248,6 +248,7 @@ class ScenarioData
 {
 	author="[42CI]Simpleton216";
 	respawn=3;
+	respawnDelay=20;
 };
 class CustomAttributes
 {
@@ -313,6 +314,25 @@ class CustomAttributes
 		};
 		class Attribute3
 		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute4
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -340,14 +360,14 @@ class CustomAttributes
 										"STRING"
 									};
 								};
-								value="Counter";
+								value="MenuPosition";
 							};
 						};
 					};
 				};
 			};
 		};
-		class Attribute4
+		class Attribute5
 		{
 			property="ReviveMode";
 			expression="false";
@@ -366,7 +386,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=5;
+		nAttributes=6;
 	};
 };
 class Mission
@@ -420,7 +440,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -9498,7 +9518,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1762.8606,46.079163,8738.2061};
+				position[]={1762.861,46.079163,8738.2061};
 			};
 			id=34;
 			type="ModuleRespawnPosition_F";
@@ -9538,7 +9558,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="FSB Whiskey Barracks";
 						};
 					};
 				};
@@ -9647,7 +9667,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="FSB Whiskey Command";
 						};
 					};
 				};
@@ -11468,7 +11488,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="Air Base";
 						};
 					};
 				};
