@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1312;
+		nextID=1333;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=41;
+		nextID=46;
 	};
 	class Camera
 	{
-		pos[]={4794.5156,382.46542,5864.6558};
-		dir[]={-0.60000908,-0.54773027,-0.58311242};
-		up[]={-0.39280111,0.83664656,-0.3817392};
-		aside[]={-0.6969521,1.5394471e-007,0.71714658};
+		pos[]={3119.396,942.50385,5660.2236};
+		dir[]={-0.29654297,-0.88299757,-0.36401582};
+		up[]={-0.55768037,0.46940875,-0.684569};
+		aside[]={-0.77534908,1.8848368e-006,0.63163382};
 	};
 };
 binarizationWanted=0;
@@ -120,7 +120,8 @@ addons[]=
 	"alive_main",
 	"alive_mil_ied",
 	"alive_sys_profile",
-	"A3_Data_F_Curator_Virtual"
+	"A3_Data_F_Curator_Virtual",
+	"A3_Modules_F_Curator_Intel"
 };
 class AddonsMetaData
 {
@@ -706,7 +707,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=102;
+		items=112;
 		class Item0
 		{
 			dataType="Layer";
@@ -2748,6 +2749,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=582;
 					type="LOP_IRA_Infantry_SL";
@@ -2875,6 +2877,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=583;
 					type="LOP_IRA_Infantry_TL";
@@ -2891,6 +2894,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=584;
 					type="LOP_IRA_Infantry_AR";
@@ -2907,6 +2911,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=585;
 					type="LOP_IRA_Infantry_AR_Asst";
@@ -2923,6 +2928,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=586;
 					type="LOP_IRA_Infantry_AT";
@@ -2939,6 +2945,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=587;
 					type="LOP_IRA_Infantry_GL";
@@ -2955,6 +2962,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=588;
 					type="LOP_IRA_Infantry_Corpsman";
@@ -2971,6 +2979,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=589;
 					type="LOP_IRA_Infantry_Rifleman_lite";
@@ -27575,6 +27584,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=1004;
 					type="LOP_IRA_Infantry_TL";
@@ -27591,6 +27601,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=1005;
 					type="LOP_IRA_Infantry_Corpsman";
@@ -27607,6 +27618,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=1006;
 					type="LOP_IRA_Infantry_Corpsman";
@@ -27654,6 +27666,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=1008;
 					type="LOP_IRA_Infantry_GL";
@@ -27670,6 +27683,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=1009;
 					type="LOP_IRA_Infantry_Rifleman_lite";
@@ -27722,6 +27736,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=1011;
 					type="LOP_IRA_Infantry_GL";
@@ -27738,6 +27753,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=1012;
 					type="LOP_IRA_Infantry_Rifleman_lite";
@@ -27791,6 +27807,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=1014;
 					type="LOP_IRA_Infantry_GL";
@@ -27807,6 +27824,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=1015;
 					type="LOP_IRA_Infantry_Rifleman_lite";
@@ -27859,6 +27877,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=1017;
 					type="LOP_IRA_Infantry_GL";
@@ -27875,6 +27894,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=1018;
 					type="LOP_IRA_Infantry_Rifleman_lite";
@@ -27928,6 +27948,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=1020;
 					type="LOP_IRA_Infantry_GL";
@@ -27944,6 +27965,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{(group this) setVariable [""VCM_NORESCUE"",true];}";
 					};
 					id=1021;
 					type="LOP_IRA_Infantry_Rifleman_lite";
@@ -34432,7 +34454,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="EAST";
+							value="CIV";
 						};
 					};
 				};
@@ -34787,16 +34809,213 @@ class Mission
 			id=1310;
 			type="B_VirtualCurator_F";
 		};
+		class Item102
+		{
+			dataType="Trigger";
+			position[]={4719.1318,274.39731,5839.668};
+			class Attributes
+			{
+				name="tower";
+				sizeA=250;
+				sizeB=250;
+				activationBy="EAST";
+			};
+			id=1322;
+			type="EmptyDetectorAreaR250";
+		};
+		class Item103
+		{
+			dataType="Trigger";
+			position[]={2905.0391,497.82532,5505.1548};
+			class Attributes
+			{
+				name="tower_1";
+				sizeA=250;
+				sizeB=250;
+				activationBy="EAST";
+			};
+			id=1323;
+			type="EmptyDetectorAreaR250";
+		};
+		class Item104
+		{
+			dataType="Trigger";
+			position[]={3619.0969,383.4678,4906.8906};
+			class Attributes
+			{
+				name="tower_2";
+				sizeA=250;
+				sizeB=250;
+				activationBy="EAST";
+			};
+			id=1324;
+			type="EmptyDetectorAreaR250";
+		};
+		class Item105
+		{
+			dataType="Trigger";
+			position[]={1623.4608,567.77203,3997.3169};
+			class Attributes
+			{
+				name="tower_3";
+				sizeA=250;
+				sizeB=250;
+				activationBy="EAST";
+			};
+			id=1325;
+			type="EmptyDetectorAreaR250";
+		};
+		class Item106
+		{
+			dataType="Trigger";
+			position[]={3171.0972,658.61298,1920.2263};
+			class Attributes
+			{
+				name="tower_4";
+				sizeA=250;
+				sizeB=250;
+				activationBy="EAST";
+			};
+			id=1326;
+			type="EmptyDetectorAreaR250";
+		};
+		class Item107
+		{
+			dataType="Trigger";
+			position[]={6496.645,428.97171,2737.9268};
+			class Attributes
+			{
+				name="tower_5";
+				sizeA=250;
+				sizeB=250;
+				activationBy="EAST";
+			};
+			id=1327;
+			type="EmptyDetectorAreaR250";
+		};
+		class Item108
+		{
+			dataType="Trigger";
+			position[]={6257.5342,290.53271,4723.5864};
+			class Attributes
+			{
+				name="tower_6";
+				sizeA=250;
+				sizeB=250;
+				activationBy="EAST";
+			};
+			id=1328;
+			type="EmptyDetectorAreaR250";
+		};
+		class Item109
+		{
+			dataType="Trigger";
+			position[]={3632.6401,729.55817,450.93262};
+			class Attributes
+			{
+				name="tower_7";
+				sizeA=250;
+				sizeB=250;
+				activationBy="EAST";
+			};
+			id=1329;
+			type="EmptyDetectorAreaR250";
+		};
+		class Item110
+		{
+			dataType="Trigger";
+			position[]={3782.02,422.67392,4231.272};
+			class Attributes
+			{
+				condition="call{tower && tower_1 && tower_2 && tower_3 && tower_4 && tower_5 && tower_6 && tower_7}";
+				sizeA=0;
+				sizeB=0;
+			};
+			id=1331;
+			type="EmptyDetector";
+		};
+		class Item111
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={3774.7661,428.77036,4129.729};
+			};
+			id=1332;
+			type="ModuleEndMission_F";
+			atlOffset=-3.0517578e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleEndMission_F_Win";
+					expression="_this setVariable ['Win',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleEndMission_F_TypeCustom";
+					expression="_this setVariable ['TypeCustom',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleEndMission_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="EveryoneWon";
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=9;
+			nextID=10;
 		};
 		class Links
 		{
-			items=9;
+			items=10;
 			class Item0
 			{
 				linkID=0;
@@ -34882,6 +35101,16 @@ class Mission
 				linkID=8;
 				item0=1001;
 				item1=1297;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item9
+			{
+				linkID=9;
+				item0=1331;
+				item1=1332;
 				class CustomData
 				{
 					type="Sync";
