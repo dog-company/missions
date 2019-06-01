@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1071;
+		nextID=1109;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=35;
+		nextID=41;
 	};
 	class Camera
 	{
-		pos[]={12052.411,248.9883,13016.162};
-		dir[]={0.43514523,-0.84318322,-0.31612113};
-		up[]={0.68217224,0.53751832,-0.49558401};
-		aside[]={-0.58782303,-8.0396421e-007,-0.80914474};
+		pos[]={12195.344,195.90276,13027.585};
+		dir[]={-0.33813578,-0.80263162,-0.49162969};
+		up[]={-0.45485443,0.59632742,-0.66132659};
+		aside[]={-0.82403731,-2.466375e-006,0.56675464};
 	};
 };
 binarizationWanted=0;
@@ -85,13 +85,14 @@ addons[]=
 	"A3_Data_F_Curator_Virtual",
 	"A3_Modules_F_Curator_Curator",
 	"acex_fortify",
-	"rhsusf_c_fmtv"
+	"rhsusf_c_fmtv",
+	"xCam_Indust_Stairs"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=33;
+		items=34;
 		class Item0
 		{
 			className="A3_Structures_F_Exp";
@@ -322,6 +323,11 @@ class AddonsMetaData
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
+		class Item33
+		{
+			className="xCam_Indust_Stairs";
+			name="xCam_Indust_Stairs";
+		};
 	};
 };
 randomSeed=7677947;
@@ -449,7 +455,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=83;
+		items=85;
 		class Item0
 		{
 			dataType="Layer";
@@ -5656,7 +5662,7 @@ class Mission
 			fillName="Grid";
 			a=17.848;
 			b=159.186;
-			angle=163.18694;
+			angle=163.1869;
 			id=960;
 			atlOffset=-2.9782257;
 		};
@@ -5725,7 +5731,7 @@ class Mission
 			position[]={12103.426,160.14748,13052.809};
 			name="marker_6";
 			type="mil_arrow";
-			angle=311.44067;
+			angle=311.44061;
 			id=966;
 		};
 		class Item30
@@ -5752,7 +5758,7 @@ class Mission
 			position[]={11905.418,150.71669,13746.621};
 			name="marker_9";
 			type="mil_arrow";
-			angle=349.6947;
+			angle=349.69464;
 			id=969;
 		};
 		class Item33
@@ -5796,7 +5802,7 @@ class Mission
 			position[]={11996.483,158.89919,13133.079};
 			name="marker_13";
 			type="mil_arrow";
-			angle=311.44064;
+			angle=311.44061;
 			id=973;
 		};
 		class Item37
@@ -7625,7 +7631,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=4;
+				items=6;
 				class Item0
 				{
 					dataType="Object";
@@ -7663,6 +7669,18 @@ class Mission
 				class Item2
 				{
 					dataType="Waypoint";
+					position[]={11810.624,145.06544,14276.961};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=1024;
+					type="Move";
+					atlOffset=0.50001526;
+				};
+				class Item3
+				{
+					dataType="Waypoint";
 					position[]={11810.961,145.03067,14278.491};
 					type="Land";
 					script="A3\functions_f\waypoints\fn_wpLand.sqf";
@@ -7670,7 +7688,7 @@ class Mission
 					{
 					};
 					showWP="NEVER";
-					id=1024;
+					id=1071;
 					atlOffset=0.5;
 					class AttachedTo
 					{
@@ -7678,17 +7696,28 @@ class Mission
 						offset[]={0,0.5,0};
 					};
 				};
-				class Item3
+				class Item4
 				{
 					dataType="Waypoint";
-					position[]={12168.434,160.19627,12961.28};
+					position[]={12166.579,160.19917,12957.742};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=1072;
+					type="Move";
+					atlOffset=1.5258789e-005;
+				};
+				class Item5
+				{
+					dataType="Waypoint";
+					position[]={12168.677,160.19205,12958.374};
 					type="Cycle";
 					class Effects
 					{
 					};
 					showWP="NEVER";
-					id=1025;
-					atlOffset=1.5258789e-005;
+					id=1073;
 				};
 			};
 			class Attributes
@@ -20313,6 +20342,38 @@ class Mission
 			};
 			id=1070;
 			type="Land_HelipadEmpty_F";
+		};
+		class Item83
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12187.91,163.54102,13001.06};
+				angles[]={6.2813587,0.67826504,6.2808437};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1105;
+			type="Land_xCam_Stairs_03";
+		};
+		class Item84
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12191.315,165.83003,12993.453};
+				angles[]={-0,2.2360742,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1108;
+			type="Land_xCam_Stairs_06";
 		};
 	};
 	class Connections
