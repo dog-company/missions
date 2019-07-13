@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=405;
+		nextID=409;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=4;
+		nextID=5;
 	};
 	class Camera
 	{
-		pos[]={13499.913,561.17725,17997.926};
-		dir[]={-0.27920768,-0.48785812,-0.82715559};
-		up[]={-0.15604767,0.87288225,-0.46228996};
-		aside[]={-0.94754142,1.6148988e-006,0.31984952};
+		pos[]={16219.496,369.27429,20113.701};
+		dir[]={0.014265891,-0.92861247,0.37099627};
+		up[]={0.035681196,0.37111953,0.9278881};
+		aside[]={0.99933612,4.8123475e-006,-0.038431861};
 	};
 };
 binarizationWanted=0;
@@ -67,13 +67,14 @@ addons[]=
 	"po_factions_me",
 	"CUP_CAStructures_Misc_Powerlines",
 	"A3_Characters_F_Orange",
-	"rhsusf_vehicles"
+	"rhsusf_vehicles",
+	"A3_Characters_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=24;
+		items=25;
 		class Item0
 		{
 			className="ALiVE_main";
@@ -232,6 +233,13 @@ class AddonsMetaData
 			className="rhsusf_vehicles";
 			name="rhsusf_vehicles";
 		};
+		class Item24
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=16588750;
@@ -355,7 +363,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=50;
+		items=54;
 		class Item0
 		{
 			dataType="Logic";
@@ -15946,6 +15954,56 @@ class Mission
 			};
 			id=404;
 			type="rhsusf_m998_d_s_4dr";
+		};
+		class Item50
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={16201.544,255.60887,20143.332};
+			};
+			name="hc_1";
+			isPlayable=1;
+			id=405;
+			type="HeadlessClient_F";
+		};
+		class Item51
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={16214.419,254.44022,20136.775};
+			};
+			name="hc_2";
+			isPlayable=1;
+			id=406;
+			type="HeadlessClient_F";
+			atlOffset=1.5258789e-005;
+		};
+		class Item52
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={16200.956,255.20218,20136.16};
+			};
+			name="hc_3";
+			isPlayable=1;
+			id=407;
+			type="HeadlessClient_F";
+		};
+		class Item53
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={16213.831,253.69568,20129.604};
+			};
+			name="hc_4";
+			isPlayable=1;
+			id=408;
+			type="HeadlessClient_F";
+			atlOffset=-1.5258789e-005;
 		};
 	};
 	class Connections
