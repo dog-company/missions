@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=241;
+		nextID=244;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=4;
+		nextID=6;
 	};
 	class Camera
 	{
-		pos[]={357.25714,143.50224,12820.834};
-		dir[]={0.90384001,-0.37198484,-0.21173143};
-		up[]={0.36221635,0.92821312,-0.084852569};
-		aside[]={-0.22809692,-1.7865386e-007,-0.97369927};
+		pos[]={338.9382,383.55182,12662.497};
+		dir[]={0.87266284,-0.48261407,-0.075390339};
+		up[]={0.48085043,0.87580383,-0.041541539};
+		aside[]={-0.08607623,1.6740523e-007,-0.99635214};
 	};
 };
 binarizationWanted=0;
@@ -47,13 +47,14 @@ addons[]=
 	"JDG_carrier",
 	"UK3CB_BAF_Units_Woodland",
 	"UK3CB_BAF_Units_ACE",
-	"TTT_NimitzElevator"
+	"TTT_NimitzElevator",
+	"A3_Characters_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=17;
+		items=18;
 		class Item0
 		{
 			className="A3_Structures_F_Exp";
@@ -165,6 +166,13 @@ class AddonsMetaData
 			className="TTT_NimitzElevator";
 			name="TTT_NimitzElevator";
 		};
+		class Item17
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=15863158;
@@ -198,7 +206,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=26;
+		items=29;
 		class Item0
 		{
 			dataType="Layer";
@@ -518,7 +526,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1902.7617,23.905588,8901.7793};
-						angles[]={-0,4.712389,0.0072670453};
+						angles[]={0,4.712389,0.0072670453};
 					};
 					side="Empty";
 					flags=4;
@@ -1313,7 +1321,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1909.3763,23.475065,8902.6201};
-						angles[]={-0,0,6.2759185};
+						angles[]={0,0,6.2759185};
 					};
 					side="East";
 					flags=4;
@@ -1329,7 +1337,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1909.3932,25.796108,8902.6201};
-						angles[]={-0,0,6.2759185};
+						angles[]={0,0,6.2759185};
 					};
 					side="East";
 					class Attributes
@@ -1345,7 +1353,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1909.3932,25.796108,8902.6201};
-						angles[]={-0,0,6.2759185};
+						angles[]={0,0,6.2759185};
 					};
 					side="East";
 					flags=2;
@@ -1411,7 +1419,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1909.3932,25.79467,8902.5703};
-				angles[]={-0,0,6.2759185};
+				angles[]={0,0,6.2759185};
 			};
 			side="East";
 			flags=6;
@@ -5957,6 +5965,45 @@ class Mission
 			id=236;
 			type="UK3CB_BAF_MAN_HX60_Transport_Green_DPMW";
 			atlOffset=38.84362;
+		};
+		class Item26
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={514.05499,-0.00025558472,13083.22};
+			};
+			name="hc1";
+			isPlayable=1;
+			id=241;
+			type="HeadlessClient_F";
+			atlOffset=24.453999;
+		};
+		class Item27
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={533.54901,0.00010299683,13000.821};
+			};
+			name="hc3";
+			isPlayable=1;
+			id=242;
+			type="HeadlessClient_F";
+			atlOffset=23.916;
+		};
+		class Item28
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={569.91498,-6.1035156e-005,13102.298};
+			};
+			name="hc2";
+			isPlayable=1;
+			id=243;
+			type="HeadlessClient_F";
+			atlOffset=23.233999;
 		};
 	};
 	class Connections
