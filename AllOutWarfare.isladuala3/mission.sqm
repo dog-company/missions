@@ -151,25 +151,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -215,6 +196,25 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
 				};
 			};
 		};
@@ -6267,7 +6267,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Camara Barracks";
+							value="";
 						};
 					};
 				};
@@ -6376,7 +6376,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Camara Barracks";
+							value="";
 						};
 					};
 				};
@@ -6445,7 +6445,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={7130.4155,18.48,2255.7012};
+				position[]={7130.416,18.48,2255.7009};
 			};
 			id=48;
 			type="ModuleRespawnPosition_F";
@@ -6485,7 +6485,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Camara Barracks";
+							value="";
 						};
 					};
 				};
@@ -6554,7 +6554,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={2583.4631,14.83,3575.7969};
+				position[]={2583.4629,14.83,3575.7971};
 			};
 			id=49;
 			type="ModuleRespawnPosition_F";
@@ -6594,7 +6594,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Camara Barracks";
+							value="";
 						};
 					};
 				};
@@ -6663,7 +6663,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={3652.2771,14.964555,3000.6301};
+				position[]={3652.2771,14.964555,3000.6299};
 			};
 			id=50;
 			type="ModuleRespawnPosition_F";
@@ -6703,7 +6703,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Camara Barracks";
+							value="";
 						};
 					};
 				};
@@ -11291,7 +11291,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5425.3291,70.389999,6682.5654};
+				position[]={5425.3291,70.389999,6682.5649};
 			};
 			id=106;
 			type="ModuleRespawnPosition_F";
@@ -11400,7 +11400,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={3056.8525,14.34,6140.4536};
+				position[]={3056.853,14.34,6140.4541};
 			};
 			id=107;
 			type="ModuleRespawnPosition_F";
@@ -11618,7 +11618,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={901.49292,27.860001,9094.0498};
+				position[]={901.49298,27.860001,9094.0498};
 			};
 			id=109;
 			type="ModuleRespawnPosition_F";
@@ -14662,47 +14662,51 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1427.332,2.8499999,1273.521};
+				position[]={5135.792,0.72070313,-2564.7534};
 			};
 			name="hc";
 			isPlayable=1;
 			id=137;
 			type="HeadlessClient_F";
+			atlOffset=44.480701;
 		};
 		class Item59
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1428.2278,2.8499999,1279.7727};
+				position[]={5136.688,0.72070313,-2558.5017};
 			};
 			name="hc_1";
 			isPlayable=1;
 			id=140;
 			type="HeadlessClient_F";
+			atlOffset=44.480701;
 		};
 		class Item60
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1431.1738,2.8499999,1277.7113};
+				position[]={5139.6338,0.72070313,-2560.563};
 			};
 			name="hc_2";
 			isPlayable=1;
 			id=141;
 			type="HeadlessClient_F";
+			atlOffset=44.480701;
 		};
 		class Item61
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1439.011,2.8499999,1276.9561};
+				position[]={5147.4712,0.72070313,-2561.3184};
 			};
 			isPlayable=1;
 			id=142;
 			type="VirtualCurator_F";
+			atlOffset=44.480701;
 		};
 		class Item62
 		{
