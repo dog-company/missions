@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1624.6869,378.31006,1177.969};
+		pos[]={1905.9553,951.41278,1349.7822};
 		dir[]={-0.44662228,-0.88769817,0.11192394};
 		up[]={-0.86107105,0.46042559,0.21578524};
 		aside[]={0.24308507,8.2422048e-008,0.97000819};
@@ -151,6 +151,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -196,25 +215,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
 				};
 			};
 		};
@@ -572,7 +572,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="true";
+							value="false";
 						};
 					};
 				};
