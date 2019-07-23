@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=147;
+		nextID=157;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1905.9553,951.41278,1349.7822};
-		dir[]={-0.44662228,-0.88769817,0.11192394};
-		up[]={-0.86107105,0.46042559,0.21578524};
-		aside[]={0.24308507,8.2422048e-008,0.97000819};
+		pos[]={4159.4004,64.307907,2231.9941};
+		dir[]={-0.87289971,-0.48760578,-0.017469089};
+		up[]={-0.48751071,0.87305713,-0.0097565027};
+		aside[]={-0.020009108,2.4762267e-007,0.99980491};
 	};
 };
 binarizationWanted=0;
@@ -38,13 +38,14 @@ addons[]=
 	"alive_mil_ato",
 	"alive_mil_logistics",
 	"A3_Data_F_Curator_Virtual",
-	"A3_Modules_F_Curator_Curator"
+	"A3_Modules_F_Curator_Curator",
+	"alive_mil_c2istar"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=14;
+		items=15;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -135,6 +136,12 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item14
+		{
+			className="ALiVE_MIL_C2ISTAR";
+			name="alive_mil_c2istar";
+			author="ALiVE Mod Team";
+		};
 	};
 };
 randomSeed=3422691;
@@ -150,25 +157,6 @@ class CustomAttributes
 	{
 		name="Multiplayer";
 		class Attribute0
-		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
 		{
 			property="RespawnTemplates";
 			expression="true";
@@ -218,6 +206,25 @@ class CustomAttributes
 				};
 			};
 		};
+		class Attribute1
+		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
 		nAttributes=2;
 	};
 };
@@ -246,7 +253,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=58;
+		items=59;
 		class Item0
 		{
 			dataType="Marker";
@@ -1363,7 +1370,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0";
+							value="250";
 						};
 					};
 				};
@@ -1458,7 +1465,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0";
+							value="35";
 						};
 					};
 				};
@@ -1610,7 +1617,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0;
+							value=0.33000001;
 						};
 					};
 				};
@@ -1648,7 +1655,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0";
+							value="10";
 						};
 					};
 				};
@@ -1738,7 +1745,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0";
+							value="250";
 						};
 					};
 				};
@@ -1757,7 +1764,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="60";
+							value="100";
 						};
 					};
 				};
@@ -1833,7 +1840,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0";
+							value="35";
 						};
 					};
 				};
@@ -1985,7 +1992,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0;
+							value=0.33000001;
 						};
 					};
 				};
@@ -2004,7 +2011,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="false";
+							value="true";
 						};
 					};
 				};
@@ -2023,7 +2030,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0";
+							value="10";
 						};
 					};
 				};
@@ -2095,7 +2102,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0";
+							value="100";
 						};
 					};
 				};
@@ -2114,7 +2121,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0";
+							value="0.6";
 						};
 					};
 				};
@@ -2247,7 +2254,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="false";
+							value="true";
 						};
 					};
 				};
@@ -2266,7 +2273,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="60";
+							value="100";
 						};
 					};
 				};
@@ -2342,7 +2349,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0";
+							value="10";
 						};
 					};
 				};
@@ -2437,7 +2444,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0";
+							value="1500";
 						};
 					};
 				};
@@ -2527,7 +2534,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0";
+							value="100";
 						};
 					};
 				};
@@ -2546,7 +2553,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0";
+							value="0.6";
 						};
 					};
 				};
@@ -2774,7 +2781,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0";
+							value="10";
 						};
 					};
 				};
@@ -2869,7 +2876,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0";
+							value="1500";
 						};
 					};
 				};
@@ -10276,11 +10283,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4527.501,0.63899994,604.16302};
+				position[]={4609.4419,0.72399902,573.32098};
 			};
 			id=131;
 			type="ALiVE_SUP_PLAYER_RESUPPLY";
-			atlOffset=44.379002;
+			atlOffset=44.464001;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10317,7 +10324,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="LaserDesignator";
+							value="Binoculars";
 						};
 					};
 				};
@@ -10578,7 +10585,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="false";
+							value="true";
 						};
 					};
 				};
@@ -10801,7 +10808,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="false";
+							value="true";
 						};
 					};
 				};
@@ -11395,6 +11402,610 @@ class Mission
 			type="Empty";
 			id=146;
 			atlOffset=-0.00038528442;
+		};
+		class Item58
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4515.5049,0.72070313,564.37378};
+			};
+			id=147;
+			type="ALiVE_MIL_C2ISTAR";
+			atlOffset=44.460705;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ALiVE_MIL_C2ISTAR_67";
+					expression="_this setVariable ['TASKING',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ALiVE_MIL_C2ISTAR_persistent";
+					expression="_this setVariable ['persistent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_MIL_C2ISTAR_friendlyIntel";
+					expression="_this setVariable ['friendlyIntel',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_MIL_C2ISTAR_intelChance";
+					expression="_this setVariable ['intelChance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="1";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_MIL_C2ISTAR_autoGenerateBluforFaction";
+					expression="_this setVariable ['autoGenerateBluforFaction',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="BLU_F";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_MIL_C2ISTAR_33";
+					expression="_this setVariable ['MODULE_PARAMS',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ALiVE_MIL_C2ISTAR_displayTraceGrid";
+					expression="_this setVariable ['displayTraceGrid',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="None";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ALiVE_MIL_C2ISTAR_scomOpsLimit";
+					expression="_this setVariable ['scomOpsLimit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="SIDE";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ALiVE_MIL_C2ISTAR_autoGenerateIndforEnemyFaction";
+					expression="_this setVariable ['autoGenerateIndforEnemyFaction',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="OPF_F";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ALiVE_MIL_C2ISTAR_c2_item";
+					expression="_this setVariable ['c2_item',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="LaserDesignator";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ALiVE_MIL_C2ISTAR_autoGenerateBlufor";
+					expression="_this setVariable ['autoGenerateBlufor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Strategic";
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="ALiVE_MIL_C2ISTAR_210";
+					expression="_this setVariable ['GROUP_MANAGEMENT',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="ALiVE_MIL_C2ISTAR_gmLimit";
+					expression="_this setVariable ['gmLimit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="SIDE";
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="ALiVE_MIL_C2ISTAR_339";
+					expression="_this setVariable ['INTEL',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute14
+				{
+					property="ALiVE_MIL_C2ISTAR_debug";
+					expression="_this setVariable ['debug',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute15
+				{
+					property="ALiVE_MIL_C2ISTAR_scomOpsAllowSpectate";
+					expression="_this setVariable ['scomOpsAllowSpectate',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute16
+				{
+					property="ALiVE_MIL_C2ISTAR_friendlyIntelRadius";
+					expression="_this setVariable ['friendlyIntelRadius',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="1000";
+						};
+					};
+				};
+				class Attribute17
+				{
+					property="ALiVE_MIL_C2ISTAR_scomOpsAllowInstantJoin";
+					expression="_this setVariable ['scomOpsAllowInstantJoin',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute18
+				{
+					property="ALiVE_MIL_C2ISTAR_displayMilitarySectors";
+					expression="_this setVariable ['displayMilitarySectors',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute19
+				{
+					property="ALiVE_MIL_C2ISTAR_autoGenerateOpforFaction";
+					expression="_this setVariable ['autoGenerateOpforFaction',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="OPF_F";
+						};
+					};
+				};
+				class Attribute20
+				{
+					property="ALiVE_MIL_C2ISTAR_displayPlayerSectors";
+					expression="_this setVariable ['displayPlayerSectors',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute21
+				{
+					property="ALiVE_MIL_C2ISTAR_displayIntel";
+					expression="_this setVariable ['displayIntel',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute22
+				{
+					property="ALiVE_MIL_C2ISTAR_autoGenerateBluforEnemyFaction";
+					expression="_this setVariable ['autoGenerateBluforEnemyFaction',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="OPF_F";
+						};
+					};
+				};
+				class Attribute23
+				{
+					property="ALiVE_MIL_C2ISTAR_autoGenerateIndfor";
+					expression="_this setVariable ['autoGenerateIndfor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="None";
+						};
+					};
+				};
+				class Attribute24
+				{
+					property="ALiVE_MIL_C2ISTAR_runEvery";
+					expression="_this setVariable ['runEvery',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute25
+				{
+					property="ALiVE_MIL_C2ISTAR_308";
+					expression="_this setVariable ['INTEL_TABLET',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute26
+				{
+					property="ALiVE_MIL_C2ISTAR_autoGenerateOpfor";
+					expression="_this setVariable ['autoGenerateOpfor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Strategic";
+						};
+					};
+				};
+				class Attribute27
+				{
+					property="ALiVE_MIL_C2ISTAR_scomIntelLimit";
+					expression="_this setVariable ['scomIntelLimit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="SIDE";
+						};
+					};
+				};
+				class Attribute28
+				{
+					property="ALiVE_MIL_C2ISTAR_autoGenerateIndforFaction";
+					expression="_this setVariable ['autoGenerateIndforFaction',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="IND_F";
+						};
+					};
+				};
+				class Attribute29
+				{
+					property="ALiVE_MIL_C2ISTAR_237";
+					expression="_this setVariable ['OPERATIONS_TABLET',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute30
+				{
+					property="ALiVE_MIL_C2ISTAR_autoGenerateOpforEnemyFaction";
+					expression="_this setVariable ['autoGenerateOpforEnemyFaction',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="BLU_F";
+						};
+					};
+				};
+				nAttributes=31;
+			};
 		};
 	};
 	class Connections
