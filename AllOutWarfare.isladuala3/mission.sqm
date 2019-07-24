@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=157;
+		nextID=158;
 	};
 	class MarkerIDProvider
 	{
@@ -158,25 +158,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -225,6 +206,25 @@ class CustomAttributes
 				};
 			};
 		};
+		class Attribute1
+		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
 		nAttributes=2;
 	};
 };
@@ -257,26 +257,26 @@ class Mission
 		class Item0
 		{
 			dataType="Marker";
-			position[]={5077.7871,0.72799999,2605.8081};
+			position[]={5161.0342,1.1010742,1473.6432};
 			name="blufor";
 			markerType="RECTANGLE";
 			type="rectangle";
 			a=5905.4551;
 			b=2976.9709;
 			id=0;
-			atlOffset=-18.099358;
+			atlOffset=-14.298925;
 		};
 		class Item1
 		{
 			dataType="Marker";
-			position[]={4620.4849,0.70800018,7364.9785};
+			position[]={5085.9395,-8.4729004,7655.8877};
 			name="opfor";
 			markerType="RECTANGLE";
 			type="rectangle";
 			a=6244.8481;
 			b=2909.0911;
 			id=1;
-			atlOffset=-14.266479;
+			atlOffset=-23.3629;
 		};
 		class Item2
 		{
@@ -10283,11 +10283,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4609.4419,0.72399902,573.32098};
+				position[]={4726.1338,0.76999664,487.17099};
 			};
 			id=131;
 			type="ALiVE_SUP_PLAYER_RESUPPLY";
-			atlOffset=44.464001;
+			atlOffset=44.509998;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10324,7 +10324,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Binoculars";
+							value="Binocular";
 						};
 					};
 				};
