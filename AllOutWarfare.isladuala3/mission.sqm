@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4159.4004,64.307907,2231.9941};
-		dir[]={-0.87289971,-0.48760578,-0.017469089};
-		up[]={-0.48751071,0.87305713,-0.0097565027};
-		aside[]={-0.020009108,2.4762267e-007,0.99980491};
+		pos[]={4144.6665,33.749851,2237.3999};
+		dir[]={0.066788644,-0.33704168,-0.93914515};
+		up[]={0.023909461,0.94147956,-0.33620328};
+		aside[]={-0.99750561,6.6658686e-007,-0.070938192};
 	};
 };
 binarizationWanted=0;
@@ -158,6 +158,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -203,25 +222,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
 				};
 			};
 		};
@@ -605,7 +605,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="50";
+							value="144";
 						};
 					};
 				};
@@ -1223,7 +1223,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0;
+							value=5;
 						};
 					};
 				};
@@ -1541,7 +1541,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Random";
+							value="Mechanized";
 						};
 					};
 				};
@@ -1916,7 +1916,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Random";
+							value="Mechanized";
 						};
 					};
 				};
@@ -2011,7 +2011,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="true";
+							value="false";
 						};
 					};
 				};
@@ -2406,7 +2406,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Random";
+							value="Mechanized";
 						};
 					};
 				};
@@ -2444,7 +2444,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="1500";
+							value="2500";
 						};
 					};
 				};
@@ -2838,7 +2838,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Random";
+							value="Mechanized";
 						};
 					};
 				};
@@ -2876,7 +2876,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="1500";
+							value="2500";
 						};
 					};
 				};
@@ -10915,11 +10915,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9266.7891,0.59645391,4128.9429};
+				position[]={8882.2207,14.701836,4104.7534};
+				angles[]={0.10857156,0,0.035984326};
 			};
 			id=135;
 			type="ALiVE_mil_logistics";
-			atlOffset=42.452587;
 			class CustomAttributes
 			{
 				class Attribute0
