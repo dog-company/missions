@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=158;
+		nextID=161;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2586.6062,99.344627,3551.2937};
-		dir[]={0.051618908,-0.4797672,0.8759824};
-		up[]={0.028224109,0.87736452,0.47895882};
-		aside[]={0.99835992,4.8639413e-007,-0.058828317};
+		pos[]={2613.5388,280.00427,3439.4763};
+		dir[]={0.0096298875,-0.80073887,0.59909302};
+		up[]={0.012869497,0.59903389,0.8005994};
+		aside[]={0.99996263,-3.458681e-007,-0.016071606};
 	};
 };
 binarizationWanted=0;
@@ -158,25 +158,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -222,6 +203,25 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
 				};
 			};
 		};
@@ -483,7 +483,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="true";
+							value="false";
 						};
 					};
 				};
@@ -7957,11 +7957,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4515.5049,0.72070313,564.37378};
+				position[]={4515.5049,0.72099686,564.37402};
 			};
 			id=147;
 			type="ALiVE_MIL_C2ISTAR";
-			atlOffset=44.460705;
+			atlOffset=44.460999;
 			class CustomAttributes
 			{
 				class Attribute0
