@@ -158,25 +158,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -225,6 +206,25 @@ class CustomAttributes
 				};
 			};
 		};
+		class Attribute1
+		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
 		nAttributes=2;
 	};
 };
@@ -263,7 +263,7 @@ class Mission
 			type="rectangle";
 			a=1505.455;
 			b=1576.9709;
-			angle=211.44998;
+			angle=211.44997;
 			id=0;
 			atlOffset=-2.2173648;
 		};
@@ -1080,7 +1080,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="250";
+							value="-400";
 						};
 					};
 				};
@@ -1099,7 +1099,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="400";
+							value="1200";
 						};
 					};
 				};
@@ -1175,7 +1175,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="35";
+							value="15";
 						};
 					};
 				};
@@ -1327,7 +1327,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0.33000001;
+							value=0;
 						};
 					};
 				};
@@ -1365,7 +1365,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="10";
+							value="0";
 						};
 					};
 				};
@@ -1437,7 +1437,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="100";
+							value="-300";
 						};
 					};
 				};
@@ -1608,7 +1608,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="400";
+							value="1200";
 						};
 					};
 				};
@@ -1684,7 +1684,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="10";
+							value="0";
 						};
 					};
 				};
@@ -1779,7 +1779,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="2500";
+							value="1000";
 						};
 					};
 				};
@@ -6556,6 +6556,7 @@ class Mission
 			};
 			id=122;
 			type="CargoNet_01_box_F";
+			atlOffset=-6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
