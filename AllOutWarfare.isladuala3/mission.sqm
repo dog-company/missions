@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=161;
+		nextID=162;
 	};
 	class MarkerIDProvider
 	{
@@ -17,9 +17,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={1476.564,27.85,1291.2085};
-		dir[]={0.003595175,-0.39443678,0.91891843};
-		up[]={0.0015431887,0.9189229,0.39443481};
-		aside[]={0.99999404,-3.4128789e-010,-0.0039123814};
+		dir[]={-0.056326635,-0.53836697,0.84083116};
+		up[]={-0.035984367,0.84270895,0.53716445};
+		aside[]={0.99776614,-5.1120878e-008,0.066839531};
 	};
 };
 binarizationWanted=0;
@@ -158,6 +158,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -206,25 +225,6 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute1
-		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
-				};
-			};
-		};
 		nAttributes=2;
 	};
 };
@@ -253,7 +253,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=27;
+		items=28;
 		class Item0
 		{
 			dataType="Marker";
@@ -263,7 +263,7 @@ class Mission
 			type="rectangle";
 			a=1505.455;
 			b=1576.9709;
-			angle=211.44997;
+			angle=211.44995;
 			id=0;
 			atlOffset=-2.2173648;
 		};
@@ -8127,6 +8127,15 @@ class Mission
 				};
 				nAttributes=31;
 			};
+		};
+		class Item27
+		{
+			dataType="Marker";
+			position[]={9810.1641,4.4169998,9351.0762};
+			name="respawn_east";
+			type="Empty";
+			id=161;
+			atlOffset=-2.8495903;
 		};
 	};
 	class Connections
