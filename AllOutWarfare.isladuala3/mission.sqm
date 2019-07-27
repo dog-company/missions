@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1476.564,27.85,1291.2085};
-		dir[]={-0.056326635,-0.53836697,0.84083116};
-		up[]={-0.035984367,0.84270895,0.53716445};
-		aside[]={0.99776614,-5.1120878e-008,0.066839531};
+		pos[]={9822.335,35.54211,9421.7266};
+		dir[]={-0.61028343,-0.31678721,-0.72613007};
+		up[]={-0.20382884,0.94849312,-0.24251918};
+		aside[]={-0.76555824,8.4401108e-009,0.6434207};
 	};
 };
 binarizationWanted=0;
@@ -158,25 +158,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -225,6 +206,25 @@ class CustomAttributes
 				};
 			};
 		};
+		class Attribute1
+		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
 		nAttributes=2;
 	};
 };
@@ -257,15 +257,14 @@ class Mission
 		class Item0
 		{
 			dataType="Marker";
-			position[]={2048.9741,0.72070313,1368.642};
+			position[]={8818.1914,5.7127018,9148.251};
 			name="blufor";
 			markerType="ELLIPSE";
 			type="rectangle";
-			a=1505.455;
-			b=1576.9709;
-			angle=211.44995;
+			a=2005.455;
+			b=1276.9709;
+			angle=211.44998;
 			id=0;
-			atlOffset=-2.2173648;
 		};
 		class Item1
 		{
@@ -740,7 +739,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6840.9941,53.276672,7955.6519};
-				angles[]={0.070880413,0,0.0079935296};
+				angles[]={0.07087782,0,0.0079936078};
 			};
 			id=7;
 			type="ALiVE_mil_OPCOM";
@@ -780,7 +779,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="invasion";
+							value="occupation";
 						};
 					};
 				};
@@ -1437,7 +1436,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="-300";
+							value="0";
 						};
 					};
 				};
@@ -1684,7 +1683,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0";
+							value="10";
 						};
 					};
 				};
@@ -4035,7 +4034,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1479.2678,2.8499999,1333.7645};
+				position[]={9792.7051,7.1723123,9388.7725};
 			};
 			id=47;
 			type="ModuleRespawnPosition_F";
@@ -6349,8 +6348,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9814.2773,7.2410803,9352.8828};
-				angles[]={0.0080084298,0,6.2805109};
+				position[]={1476.1311,2.8499999,1336.458};
 			};
 			id=107;
 			type="ModuleRespawnPosition_F";
@@ -6459,7 +6457,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1475.7849,3.4849963,1333.5065};
+				position[]={9789.2217,7.8082595,9388.5137};
+				angles[]={-0,0,6.2825875};
 			};
 			side="Empty";
 			flags=4;
@@ -6468,6 +6467,7 @@ class Mission
 			};
 			id=116;
 			type="CargoNet_01_box_F";
+			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6546,8 +6546,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9818.4238,7.8942728,9349.5527};
-				angles[]={0.013918269,0,6.2805109};
+				position[]={1480.2776,3.4849329,1333.1279};
 			};
 			side="Empty";
 			flags=4;
@@ -6556,7 +6555,6 @@ class Mission
 			};
 			id=122;
 			type="CargoNet_01_box_F";
-			atlOffset=-6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7044,8 +7042,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8882.2207,14.701836,4104.7534};
-				angles[]={0.10857156,0,0.035984326};
+				position[]={7206.8789,14.93,7661.1548};
 			};
 			id=135;
 			type="ALiVE_mil_logistics";
@@ -7518,11 +7515,10 @@ class Mission
 		class Item25
 		{
 			dataType="Marker";
-			position[]={1468.1389,0,1328.4562};
+			position[]={9800.0273,7.1937776,9362.335};
 			name="respawn_west";
 			type="Empty";
 			id=145;
-			atlOffset=-2.8499999;
 		};
 		class Item26
 		{
@@ -7665,7 +7661,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="None";
+							value="Cross";
 						};
 					};
 				};
@@ -7722,7 +7718,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="LaserDesignator";
+							value="Binocular";
 						};
 					};
 				};
@@ -7893,7 +7889,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="true";
+							value="false";
 						};
 					};
 				};
@@ -8131,11 +8127,11 @@ class Mission
 		class Item27
 		{
 			dataType="Marker";
-			position[]={9810.1641,4.4169998,9351.0762};
+			position[]={1472.0178,-13.344238,1334.6514};
 			name="respawn_east";
 			type="Empty";
 			id=161;
-			atlOffset=-2.8495903;
+			atlOffset=-16.194239;
 		};
 	};
 	class Connections
