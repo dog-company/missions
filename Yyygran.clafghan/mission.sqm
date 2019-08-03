@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=99;
+		nextID=102;
 	};
 	class Camera
 	{
@@ -36,13 +36,14 @@ addons[]=
 	"A3_Supplies_F_Enoch_Ammoboxes",
 	"alive_sup_artillery",
 	"alive_mil_ied",
-	"alive_mil_placement"
+	"alive_mil_placement",
+	"A3_Characters_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=16;
+		items=17;
 		class Item0
 		{
 			className="ALiVE_main";
@@ -141,6 +142,13 @@ class AddonsMetaData
 			className="ALiVE_mil_placement";
 			name="alive_mil_placement";
 			author="ALiVE Mod Team";
+		};
+		class Item16
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -241,7 +249,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=25;
+		items=28;
 		class Item0
 		{
 			dataType="Logic";
@@ -2404,7 +2412,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4866.6211,493.94131,13740.313};
-				angles[]={-0,1.9495142,0};
+				angles[]={0,1.9495142,0};
 			};
 			side="Empty";
 			flags=4;
@@ -2420,7 +2428,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4867.9985,493.94131,13743.569};
-				angles[]={-0,1.9495142,0};
+				angles[]={0,1.9495142,0};
 			};
 			side="Empty";
 			flags=4;
@@ -2436,7 +2444,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4875.0786,493.54178,13753.807};
-				angles[]={-0,3.2650945,0};
+				angles[]={0,3.2650945,0};
 			};
 			side="Empty";
 			flags=4;
@@ -2452,7 +2460,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4878.9116,493.54178,13753.486};
-				angles[]={-0,3.1608603,0};
+				angles[]={0,3.1608603,0};
 			};
 			side="Empty";
 			flags=4;
@@ -2468,7 +2476,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4869.4121,493.73093,13753.444};
-				angles[]={-0,3.1076376,0};
+				angles[]={0,3.1076376,0};
 			};
 			side="Empty";
 			flags=4;
@@ -6149,6 +6157,42 @@ class Mission
 				};
 				nAttributes=22;
 			};
+		};
+		class Item25
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4901.0801,491.20206,13727.814};
+			};
+			name="hc";
+			isPlayable=1;
+			id=99;
+			type="HeadlessClient_F";
+		};
+		class Item26
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4896.7329,491.17499,13730.308};
+			};
+			name="hc2";
+			isPlayable=1;
+			id=100;
+			type="HeadlessClient_F";
+		};
+		class Item27
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4900.1499,491.17499,13733.335};
+			};
+			name="hc3";
+			isPlayable=1;
+			id=101;
+			type="HeadlessClient_F";
 		};
 	};
 	class Connections
