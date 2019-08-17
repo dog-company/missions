@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=129;
 	class ItemIDProvider
 	{
-		nextID=3980;
+		nextID=3982;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=89;
+		nextID=100;
 	};
 	class Camera
 	{
-		pos[]={8991.7197,2453.6143,4457.7354};
-		dir[]={0.46525604,-0.5874368,0.66218889};
-		up[]={0.33772126,0.80925179,0.48067319};
-		aside[]={0.81824225,2.0116568e-007,-0.57489926};
+		pos[]={19972.793,225.8511,21592.842};
+		dir[]={-0.34058708,-0.60922301,0.71613604};
+		up[]={-0.2616564,0.79299867,0.55017203};
+		aside[]={0.90307224,-7.2679541e-008,0.42949218};
 	};
 };
 binarizationWanted=0;
@@ -168,13 +168,14 @@ addons[]=
 	"A3_Static_F_Sams_SAM_System_03",
 	"A3_Air_F_EPC_Plane_CAS_02",
 	"A3_Modules_F_ObjectModifiers",
-	"A3_Modules_F_Curator_Curator"
+	"A3_Modules_F_Curator_Curator",
+	"A3_Supplies_F_Exp_Ammoboxes"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=87;
+		items=88;
 		class Item0
 		{
 			className="A3_Characters_F_Jets";
@@ -762,6 +763,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item87
+		{
+			className="A3_Supplies_F_Exp";
+			name="Arma 3 Apex - Ammoboxes and Supplies";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=3610452;
@@ -774,7 +782,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -856,7 +864,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=203;
+		items=204;
 		class Item0
 		{
 			dataType="Group";
@@ -2851,6 +2859,7 @@ class Mission
 			};
 			id=9;
 			type="AmmoCrates_NoInteractive_Large";
+			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2884,7 +2893,7 @@ class Mission
 										};
 										class value
 										{
-											items=329;
+											items=333;
 											class Item0
 											{
 												class data
@@ -7489,6 +7498,62 @@ class Mission
 														};
 													};
 													value="ACE_NVG_Wide";
+												};
+											};
+											class Item329
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="rhs_m136_hedp_mag";
+												};
+											};
+											class Item330
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="rhs_m136_hp_mag";
+												};
+											};
+											class Item331
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="rhsusf_mag_17Rnd_9x19_JHP";
+												};
+											};
+											class Item332
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="rhsusf_mag_17Rnd_9x19_FMJ";
 												};
 											};
 										};
@@ -12470,10 +12535,10 @@ class Mission
 		class Item42
 		{
 			dataType="Marker";
-			position[]={17682.111,24.350657,10023.769};
+			position[]={17997.582,4.110466,10139.444};
 			name="marker_0";
 			type="mil_arrow";
-			angle=258.21371;
+			angle=198.30724;
 			id=62;
 		};
 		class Item43
@@ -30667,7 +30732,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="We have been instructed to search for unspecified stolen equipment. Possible locations are shown on the map. Expect some old AT, we should only be up against FIA forces, keep an eye out for anything out of place. There may be some light enemy air in the area.";
+							value="We have been instructed to search for unspecified stolen equipment. Possible locations are shown on the map. Expect some old AT, we should only be up against FIA forces, keep an eye out for anything out of place. There may be some light enemy air in the area." \n "" \n "Civilians ARE in the the area.";
 						};
 					};
 				};
@@ -35573,6 +35638,126 @@ class Mission
 					};
 				};
 				nAttributes=4;
+			};
+		};
+		class Item203
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19892.486,17.781622,21766.896};
+				angles[]={0,4.3692923,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3981;
+			type="Box_NATO_Equip_F";
+			atlOffset=9.7994308;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_arsenal_attribute";
+					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"ARRAY"
+											};
+										};
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="ACE_EarPlugs";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="tf_anprc152";
+												};
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Enh_featureType";
+					expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};
