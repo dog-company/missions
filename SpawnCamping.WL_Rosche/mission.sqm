@@ -13,9 +13,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={13746.216,665.90674,10447.062};
-		dir[]={-0.64109057,-0.76026732,-0.10512249};
-		up[]={-0.75026178,0.64959866,-0.12302416};
-		aside[]={-0.1618185,-3.3462129e-008,0.98685008};
+		dir[]={0.48670918,-0.51040727,0.70898169};
+		up[]={0.28888983,0.85991657,0.42082208};
+		aside[]={0.8244549,1.2438977e-007,-0.56597948};
 	};
 };
 binarizationWanted=0;
@@ -137,10 +137,76 @@ class ScenarioData
 {
 	author="ZeroNationality";
 };
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="Enh_ambientFlyby_speed";
+			expression="missionNamespace setVariable ['Enh_AmbientFlyby_Speed',_value]";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"STRING"
+						};
+					};
+					value="normal";
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="Enh_Airdrop_Condition";
+			expression="if (isServer) then {missionNamespace setVariable ['Enh_Airdrop_Condition',_value]}";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"STRING"
+						};
+					};
+					value="false";
+				};
+			};
+		};
+		class Attribute2
+		{
+			property="Enh_Airdrop_Side";
+			expression="if (isServer) then {missionNamespace setVariable ['Enh_Airdrop_Side',_value]}";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"STRING"
+						};
+					};
+					value="WEST";
+				};
+			};
+		};
+		nAttributes=3;
+	};
+};
 class Mission
 {
 	class Intel
 	{
+		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.1;
 		startWind=0.1;
