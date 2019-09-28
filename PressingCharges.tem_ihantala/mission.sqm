@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2;
+		nextID=3;
 	};
 	class Camera
 	{
-		pos[]={1539.0951,409.55548,3184.6658};
-		dir[]={0.74854761,-0.65607339,-0.097017244};
-		up[]={0.6507228,0.75460386,-0.084336668};
-		aside[]={-0.12854154,-1.3080426e-006,-0.99178332};
+		pos[]={1822.8519,131.5027,3095.9751};
+		dir[]={0.8762297,-0.48019251,0.040589269};
+		up[]={0.47968331,0.87716049,0.022220032};
+		aside[]={0.046273466,6.8781446e-008,-0.99893445};
 	};
 };
 binarizationWanted=0;
@@ -242,18 +242,128 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2361.2925,29.254934,2937.1992};
-						angles[]={0,0.30837148,0};
+						position[]={2361.292,29.254887,2937.199};
+						angles[]={0,0.30836475,0};
 					};
 					side="Independent";
 					flags=7;
 					class Attributes
 					{
 						rank="SERGEANT";
-						isPlayer=1;
 					};
 					id=41;
 					type="I_L_Looter_Pistol_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_featureType";
+							expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="0";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03POL";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_ambientAnimParams";
+							expression="	if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};	[_this,_value] spawn	{		sleep 0.1;		params ['_unit','_value'];		if ((_value # 0 != '') && !isMultiplayer) then		{			[_unit,_value # 0,_value # 1,objNull,false,false] call BIS_fnc_ambientAnim;			waitUntil {sleep 0.1; ((behaviour _unit) == 'COMBAT') || (damage _unit > 0.6)};			_unit call BIS_fnc_ambientAnim__terminate;		};	}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"ARRAY"
+										};
+									};
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="";
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ASIS";
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=4;
+					};
 				};
 			};
 			class Attributes
@@ -2854,6 +2964,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						isPlayable=1;
 					};
 					id=217;
 					type="LOP_GRE_Infantry_SL";
@@ -2944,6 +3055,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						isPlayable=1;
 					};
 					id=218;
 					type="LOP_GRE_Infantry_MG";
@@ -3035,6 +3147,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						isPlayable=1;
 					};
 					id=219;
 					type="LOP_GRE_Infantry_MG";
@@ -3125,6 +3238,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						isPlayable=1;
 					};
 					id=220;
 					type="LOP_GRE_Infantry_AT";
@@ -3216,6 +3330,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						isPlayable=1;
 					};
 					id=221;
 					type="LOP_GRE_Infantry_AT";
@@ -3306,6 +3421,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						isPlayable=1;
 					};
 					id=222;
 					type="LOP_GRE_Infantry_Rifleman";
@@ -3397,6 +3513,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						isPlayable=1;
 					};
 					id=223;
 					type="LOP_GRE_Infantry_AT_Asst";
@@ -3488,6 +3605,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						isPlayable=1;
 					};
 					id=224;
 					type="LOP_GRE_Infantry_Corpsman";
@@ -3592,6 +3710,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						isPlayable=1;
 					};
 					id=226;
 					type="LOP_GRE_Infantry_SL";
@@ -3682,6 +3801,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						isPlayable=1;
 					};
 					id=227;
 					type="LOP_GRE_Infantry_MG";
@@ -3773,6 +3893,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						isPlayable=1;
 					};
 					id=228;
 					type="LOP_GRE_Infantry_MG";
@@ -3863,6 +3984,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						isPlayable=1;
 					};
 					id=229;
 					type="LOP_GRE_Infantry_AT";
@@ -3954,6 +4076,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						isPlayable=1;
 					};
 					id=230;
 					type="LOP_GRE_Infantry_AT";
@@ -4044,6 +4167,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						isPlayable=1;
 					};
 					id=231;
 					type="LOP_GRE_Infantry_Rifleman";
@@ -4135,6 +4259,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						isPlayable=1;
 					};
 					id=232;
 					type="LOP_GRE_Infantry_AT_Asst";
@@ -4226,6 +4351,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						isPlayable=1;
 					};
 					id=233;
 					type="LOP_GRE_Infantry_Corpsman";
