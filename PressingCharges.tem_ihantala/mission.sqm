@@ -8,18 +8,22 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=241;
+		nextID=243;
 	};
-	class LayerIndexProvider
+	class MarkerIDProvider
 	{
 		nextID=1;
 	};
+	class LayerIndexProvider
+	{
+		nextID=2;
+	};
 	class Camera
 	{
-		pos[]={1116.6649,27.589756,3221.6206};
-		dir[]={-0.29365131,-0.41660175,0.86044031};
-		up[]={-0.13460055,0.90901846,0.39439562};
-		aside[]={0.94646639,-6.1187893e-007,0.32301193};
+		pos[]={1539.0951,409.55548,3184.6658};
+		dir[]={0.74854761,-0.65607339,-0.097017244};
+		up[]={0.6507228,0.75460386,-0.084336668};
+		aside[]={-0.12854154,-1.3080426e-006,-0.99178332};
 	};
 };
 binarizationWanted=0;
@@ -43,13 +47,15 @@ addons[]=
 	"A3_Structures_F_EPA_Civ_Constructions",
 	"A3_Structures_F_Civ_Constructions",
 	"po_factions_eu",
-	"A3_Weapons_F_Bootcamp_Ammoboxes"
+	"A3_Weapons_F_Bootcamp_Ammoboxes",
+	"A3_Modules_F_Multiplayer",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=10;
+		items=12;
 		class Item0
 		{
 			className="A3_Characters_F_Enoch";
@@ -119,12 +125,86 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item10
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item11
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=12217020;
 class ScenarioData
 {
 	author="ZeroNationality";
+	respawn=3;
+	respawnDelay=10;
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=2;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="MenuPosition";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Counter";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
@@ -149,7 +229,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=73;
+		items=75;
 		class Item0
 		{
 			dataType="Group";
@@ -730,14 +810,14 @@ class Mission
 					};
 					id=82;
 					type="I_L_Looter_Pistol_F";
-					atlOffset=0.02849865;
+					atlOffset=0.028497696;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=96;
-			atlOffset=0.02849865;
+			atlOffset=0.028497696;
 		};
 		class Item19
 		{
@@ -762,14 +842,14 @@ class Mission
 					};
 					id=83;
 					type="I_L_Looter_SG_F";
-					atlOffset=0.22375774;
+					atlOffset=0.22375679;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=97;
-			atlOffset=0.22375774;
+			atlOffset=0.22375679;
 		};
 		class Item20
 		{
@@ -1519,12 +1599,14 @@ class Mission
 					};
 					id=124;
 					type="I_L_Looter_SG_F";
+					atlOffset=-9.5367432e-007;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=142;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item44
 		{
@@ -1667,14 +1749,14 @@ class Mission
 					};
 					id=149;
 					type="I_L_Looter_Pistol_F";
-					atlOffset=0.35601807;
+					atlOffset=0.35601711;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=148;
-			atlOffset=0.35601807;
+			atlOffset=0.35601711;
 		};
 		class Item49
 		{
@@ -1990,14 +2072,14 @@ class Mission
 					};
 					id=169;
 					type="I_L_Criminal_SG_F";
-					atlOffset=-0.075036526;
+					atlOffset=-0.075036049;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=168;
-			atlOffset=-0.075036526;
+			atlOffset=-0.075036049;
 		};
 		class Item59
 		{
@@ -2497,6 +2579,7 @@ class Mission
 					};
 					id=200;
 					type="Land_Campfire_F";
+					atlOffset=-5.7220459e-006;
 				};
 				class Item16
 				{
@@ -4242,6 +4325,7 @@ class Mission
 			};
 			id=235;
 			type="LOP_GRE_M998_D_4DR";
+			atlOffset=-0.0017375946;
 		};
 		class Item70
 		{
@@ -4258,6 +4342,7 @@ class Mission
 			};
 			id=237;
 			type="LOP_GRE_M998_D_4DR";
+			atlOffset=-0.0009021759;
 		};
 		class Item71
 		{
@@ -4274,6 +4359,7 @@ class Mission
 			};
 			id=238;
 			type="LOP_GRE_M998_D_4DR";
+			atlOffset=3.2424927e-005;
 		};
 		class Item72
 		{
@@ -4381,6 +4467,130 @@ class Mission
 				};
 				nAttributes=3;
 			};
+		};
+		class Item73
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1103.4919,22.282646,3221.8291};
+			};
+			id=241;
+			type="ModuleRespawnPosition_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleRespawnPosition_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleRespawnPosition_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Starting Area";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleRespawnPosition_F_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="1";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleRespawnPosition_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="1";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleRespawnPosition_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item74
+		{
+			dataType="Marker";
+			position[]={2314.343,11.664,3026.821};
+			name="marker_0";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorRed";
+			fillName="Border";
+			a=393.314;
+			b=393.314;
+			drawBorder=1;
+			id=242;
+			atlOffset=-11.163469;
 		};
 	};
 };
