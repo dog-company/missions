@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=270;
+		nextID=275;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2382.8352,980.75439,3542.4895};
-		dir[]={-0.11122973,-0.83649099,0.53679675};
-		up[]={-0.16971429,0.54801488,0.81905591};
-		aside[]={0.97931546,1.5774276e-006,0.20292036};
+		pos[]={2817.2131,27.253117,1708.1024};
+		dir[]={0.63890165,-0.37786016,0.67028195};
+		up[]={0.26076117,0.92580789,0.27356598};
+		aside[]={0.72392553,-1.4594261e-006,-0.69003952};
 	};
 };
 binarizationWanted=0;
@@ -31,13 +31,14 @@ addons[]=
 	"WW2_Assets_c_Vehicles_Pictures_c",
 	"A3_Modules_F_Multiplayer",
 	"A3_Ui_F",
-	"WW2_Core_c_IF_Gui_c"
+	"WW2_Core_c_IF_Gui_c",
+	"fow_munitions_c"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=7;
+		items=8;
 		class Item0
 		{
 			className="WW2_Assets_c_Characters_Winter_c";
@@ -77,6 +78,11 @@ class AddonsMetaData
 			className="WW2_Core_c_IF_Gui_c";
 			name="WW2_Core_c_IF_Gui_c";
 		};
+		class Item7
+		{
+			className="fow_munitions_c";
+			name="fow_munitions_c";
+		};
 	};
 };
 randomSeed=1526613;
@@ -109,7 +115,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=44;
+		items=45;
 		class Item0
 		{
 			dataType="Group";
@@ -2822,6 +2828,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						isPlayable=1;
 					};
 					id=258;
 					type="LIB_GER_Mgunner_w";
@@ -3140,6 +3147,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						isPlayable=1;
 					};
 					id=259;
 					type="LIB_GER_Medic_w";
@@ -3458,6 +3466,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						isPlayable=1;
 					};
 					id=260;
 					type="LIB_GER_Scout_ober_rifleman_w";
@@ -3776,6 +3785,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						isPlayable=1;
 					};
 					id=261;
 					type="LIB_GER_Ober_rifleman_w";
@@ -4086,13 +4096,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={2830.1929,23.287752,1707.7267};
-						angles[]={-0,5.4274592,0};
+						angles[]={0,5.4274592,0};
 					};
 					side="West";
 					flags=1;
 					class Attributes
 					{
 						skill=0.40000001;
+						isPlayable=1;
 					};
 					id=262;
 					type="LIB_GER_Rifleman_w";
@@ -4410,6 +4421,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						isPlayable=1;
 					};
 					id=263;
 					type="LIB_GER_AT_grenadier_w";
@@ -4727,6 +4739,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						isPlayable=1;
 					};
 					id=264;
 					type="LIB_GER_AT_grenadier_w";
@@ -5043,6 +5056,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						isPlayable=1;
 					};
 					id=265;
 					type="LIB_GER_Rifleman_w";
@@ -5360,6 +5374,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						isPlayable=1;
 					};
 					id=266;
 					type="LIB_GER_Scout_rifleman_w";
@@ -6019,6 +6034,293 @@ class Mission
 			b=654.323;
 			id=269;
 			atlOffset=-12.226055;
+		};
+		class Item44
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2819.9148,22.360456,1714.699};
+				angles[]={6.0845842,0,0.15500268};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=274;
+			type="fow_ab_ger_dropcanister";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_arsenal_attribute";
+					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"ARRAY"
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=1;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Enh_HoldAction";
+					expression="			_value params ['_name','_iconIdle','_iconProgress','_conditionShow','_conditionProgress','_codeStart','_codeProgress','_codeCompletion','_codeInterrupt','_duration','_priority','_showUnconscious','_showWindow'];			if (!is3DEN && !(_name isEqualTo '')) then			{				[					_this,					_name,					_iconIdle,					_iconProgress,					_conditionShow,					_conditionProgress,					compile _codeStart,					compile _codeProgress,					compile format ['%1 %2','[_this select 0,_this select 2] remoteExecCall [''removeAction'',0]; remoteExecCall ['''',_this select 0];',_codeCompletion],					compile _codeInterrupt,					nil,					_duration,					_priority,					true,					_showUnconscious,					_showWindow				] remoteExecCall ['BIS_fnc_holdActionAdd',0,_this];			};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+							class value
+							{
+								items=14;
+								class Item0
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="";
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa";
+									};
+								};
+								class Item2
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa";
+									};
+								};
+								class Item3
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="true";
+									};
+								};
+								class Item4
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="true";
+									};
+								};
+								class Item5
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="";
+									};
+								};
+								class Item6
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="";
+									};
+								};
+								class Item7
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="";
+									};
+								};
+								class Item8
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="";
+									};
+								};
+								class Item9
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=10;
+									};
+								};
+								class Item10
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=1000;
+									};
+								};
+								class Item11
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"BOOL"
+											};
+										};
+										value=0;
+									};
+								};
+								class Item12
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"BOOL"
+											};
+										};
+										value=1;
+									};
+								};
+								class Item13
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="";
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 	class Connections
